@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* header page */
+
+.header__page {
+    height: 200px;
+    background-color: lawngreen;
+}
+
+
+/* end header */
