@@ -25,7 +25,9 @@ Route::get('/', function () {
        //
        Route::get('adminManageGet','Backend\adminManage@adminManageGet')->name('adminManageGet');
 
-   
+       //Quản Lý Sản Phẩm
+       Route::get('product','Backend\Product@product')->name('product');
+       //End Quản Lý Sản Phẩm
    });
 //end login admin
 
