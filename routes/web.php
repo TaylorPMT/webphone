@@ -24,9 +24,10 @@ Route::get('/', function () {
    Route::group(['prefix' => 'admin','middleware'=>'loginAdminmiddleware'], function() {
        //
        Route::get('adminManageGet','Backend\adminManage@adminManageGet')->name('adminManageGet');
-   });
+
    
-  
-
-
+   });
 //end login admin
+
+
+

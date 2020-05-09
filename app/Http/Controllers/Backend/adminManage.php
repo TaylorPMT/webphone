@@ -10,6 +10,10 @@ class adminManage extends Controller
     //
     function adminManageGet()
     {
-        echo "chức năng";
+        return view('backend.template');
+    }
+    function template()
+    {
+        return view('backend.template');
     }
 }

@@ -20,12 +20,13 @@ class loginAdmin extends Controller
         $password=$request->password;
         if(Auth::attempt(['name' => $user, 'password' => $password,'access'=>1]))
         {
-            return redirect()->route('adminManageGet');
+            return redirect()->route('template');
         }
         else
         {
             return redirect()->route('getloginAdmin');
         }
     }
+    
     //end login
 }
