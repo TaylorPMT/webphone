@@ -14,27 +14,86 @@
           @yield('head')    
 </head>
 <body>
-    <div class="box__page container-fluid"> 
-      
-          <div class="row">
-              <div class="col-3">
+    <header class="box-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="box-header__banner">
+                    <div class="col-md-12">
+                        this is a banner
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-main__nav">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <ul class="navbar-nav">
+                        {{-- 0 --}}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                      Quản Lý Loại
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ Route('catogory') }}">Danh Sách Loại</a>
+                            <a class="dropdown-item" href="#">Xóa </a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                     </li>
+                    <!-- #1  -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                        Quản Lý Sản Phẩm
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Thêm Sản Phẩm</a>
+                            <a class="dropdown-item" href="#">Xóa </a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                     </li>
+                     <!-- #2  -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                        Quản Lý Đơn Hàng
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Thêm Sản Phẩm</a>
+                            <a class="dropdown-item" href="#">Xóa </a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                     </li>
+                     <!-- #3  -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                        Quản Lý Khuyến Mãi
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Thêm Sản Phẩm</a>
+                            <a class="dropdown-item" href="#">Xóa </a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                     </li>
+                     <!-- #3  -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                        Quản Lý Tin Tức
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Thêm Sản Phẩm</a>
+                            <a class="dropdown-item" href="#">Xóa </a>
+                            <a class="dropdown-item" href="#">Link 3</a>
+                        </div>
+                     </li>
+                 </ul>
+            </nav>
+        </div>
+    </header>
 
-              </div>
-              <div class="col-9">
-                    <header>
-                    </header>
-                    <main>
-                        </main>      
-              </div>
-              <footer>
-                  
-              </footer>
-          </div>
+    <main class="box-main">
+         @yield('content')
+    </main>
 
-
-    </div>
-
-
+    <footer>
+        this is footer
+    </footer>
 
 
 

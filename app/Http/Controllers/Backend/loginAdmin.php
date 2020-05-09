@@ -28,5 +28,6 @@ class loginAdmin extends Controller
             return redirect()->back()->with("message",["type"=>"danger","msg"=>"Sai mật khẩu or tài khoản"])->withInput();
         }
     }
+    
     //end login
 }

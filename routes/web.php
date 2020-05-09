@@ -24,9 +24,16 @@ Route::get('/', function () {
    Route::group(['prefix' => 'admin','middleware'=>'loginAdminmiddleware'], function() {
        //
        Route::get('adminManageGet','Backend\adminManage@adminManageGet')->name('adminManageGet');
-   });
+
+       // Quản Lý Loại 
+        Route::get('catogory','Backend\catogory@catogory')->name('catogory');
+
+       // End quản Lý Loại
+
    
-  
+   });
+//end login admin
+
 
 
 //end login admin
