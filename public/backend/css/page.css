@@ -12,6 +12,11 @@
     background-color: lawngreen;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
 
 /* end header */
 
