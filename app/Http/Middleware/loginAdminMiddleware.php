@@ -23,7 +23,8 @@ class loginAdminMiddleware
         }
         else
         {
-            return redirect()->route('getloginAdmin');
+            
+            return redirect()->route('getloginAdmin')->with("message",["type"=>"danger","msg"=>"Vui lòng đăng Nhập "]);;
         }
     }
 }

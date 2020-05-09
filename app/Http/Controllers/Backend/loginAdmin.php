@@ -23,8 +23,9 @@ class loginAdmin extends Controller
             return redirect()->route('adminManageGet');
         }
         else
-        {
-            return redirect()->route('getloginAdmin');
+        { 
+           
+            return redirect()->back()->with("message",["type"=>"danger","msg"=>"Sai mật khẩu or tài khoản"])->withInput();
         }
     }
     //end login

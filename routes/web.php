@@ -30,3 +30,6 @@ Route::get('/', function () {
 
 
 //end login admin
+
+//404
+Route::get('error','Backend\Error@error')->name('error');
