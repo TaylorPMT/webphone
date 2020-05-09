@@ -16,3 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('backend.loginadmin');
 });
+/* backend */
+// Route Login admin //
+   Route::get('login','Backend\loginAdmin@getloginAdmin')->name('getloginAdmin');
+   Route::post('postlogin','Backend\loginAdmin@postloginAdmin')->name('postloginAdmin');
+   
+   Route::group(['prefix' => 'admin','middleware'=>'loginAdminmiddleware'], function() {
+       //
+       Route::get('adminManageGet','Backend\adminManage@adminManageGet')->name('adminManageGet');
+   });
+   
+  
+
+
+//end login admin
