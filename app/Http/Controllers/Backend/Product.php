@@ -16,5 +16,8 @@ class Product extends Controller
         return view('backend.product',compact('product'));
     }
 
-    
+    public function them(){
+
+        return view('backend.product-them');
+    }
 }

@@ -27,6 +27,8 @@ Route::get('/', function () {
 
        //Quản Lý Sản Phẩm
        Route::get('product','Backend\Product@product')->name('product');
+
+       Route::get('them','Backend\Product@them')->name('them');
        //End Quản Lý Sản Phẩm
        // Quản Lý Loại 
         Route::get('catogory','Backend\catogory@catogory')->name('catogory');
