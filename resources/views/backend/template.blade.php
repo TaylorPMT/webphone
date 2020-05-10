@@ -50,7 +50,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{Route('product')}}">Danh Sách Sản Phẩm</a>
-                            <a class="dropdown-item" href="{{Route('product')}}">Thêm Sản Phẩm</a>
+                            <a class="dropdown-item" href="{{Route('them')}}">Thêm Sản Phẩm</a>
                             <a class="dropdown-item" href="#">Xóa </a>
                             <a class="dropdown-item" href="#">Link 3</a>
                         </div>
