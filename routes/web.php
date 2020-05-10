@@ -33,6 +33,8 @@ Route::get('/', function () {
        // Quản Lý Loại 
         Route::get('catogory','Backend\catogory@catogory')->name('catogory');
         Route::get('update_category/{id_loai}','Backend\catogory@update_category')->name('update_category');
+        Route::get('categoryInsert','Backend\catogory@categoryInsert')->name('categoryInsert');
+        Route::post('postcategoryInsert','Backend\catogory@postcategoryInsert')->name('postcategoryInsert');
 
        // End quản Lý Loại
 

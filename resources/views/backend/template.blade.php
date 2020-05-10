@@ -39,7 +39,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{ Route('catogory') }}">Danh Sách Loại</a>
-                            <a class="dropdown-item" href="#">Xóa </a>
+                            <a class="dropdown-item" href="{{ Route('categoryInsert') }}">Thêm Loại </a>
                             <a class="dropdown-item" href="#">Link 3</a>
                         </div>
                      </li>
@@ -106,11 +106,7 @@
 
   
     @yield('script')
-    <script>
-            $(document).ready( function () {
-            $('#myTable').DataTable();
-        } );
-    </script>
+  
     
 </body>
 
