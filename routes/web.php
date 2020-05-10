@@ -27,6 +27,7 @@ Route::get('/', function () {
 
        // Quản Lý Loại 
         Route::get('catogory','Backend\catogory@catogory')->name('catogory');
+        Route::get('update_category/{id_loai}','Backend\catogory@update_category')->name('update_category');
 
        // End quản Lý Loại
 
