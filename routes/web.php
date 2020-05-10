@@ -25,18 +25,15 @@ Route::get('/', function () {
        //
        Route::get('adminManageGet','Backend\adminManage@adminManageGet')->name('adminManageGet');
 
-<<<<<<< HEAD
        //Quản Lý Sản Phẩm
        Route::get('product','Backend\Product@product')->name('product');
        //End Quản Lý Sản Phẩm
-=======
        // Quản Lý Loại 
         Route::get('catogory','Backend\catogory@catogory')->name('catogory');
 
        // End quản Lý Loại
 
    
->>>>>>> ef90fe5848ebc64f420ccee265212e409539c07b
    });
 //end login admin
 

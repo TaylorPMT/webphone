@@ -11,7 +11,7 @@ class db_product extends Model
 
 
     public function db_category(){
-        return $this->belongsTo('App\Models\category');
+        return $this->belongsTo('App\Models\db_category','id');
     }
 
 }

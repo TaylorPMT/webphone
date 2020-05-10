@@ -1,34 +1,35 @@
-@includeIf('backend.template')
+@extends('backend.template')
 @section('title','Quản Lý Sản Phẩm')
 
 @section('content')
 
-  <h2>Dark Striped Table</h2>
-  <p>Combine .table-dark and .table-striped to create a dark, striped table:</p>            
-  <table class="table table-dark table-striped">
+  <h2>Quản Lý Sản Phẩm</h2>
+         
+  <table class="table table-dark table-striped" id="myTable">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>#</th>
+        <th>Tên Sản Phẩm</th>
+        <th>Hình Ảnh</th>
+        <th>Giá</th>
+        <th>Giá Khuyến Mãi</th>
+        <th>Người Đăng/Sửa</th>
+        <th>Trạng Thái</th>
       </tr>
     </thead>
     <tbody>
+      @foreach($product as $product)
       <tr>
-        <td>John</td>
-        <td>Doe</td>
+        <td>{{$product->id}}</td>
+        <td>{{$product->name}}</td>
         <td>john@example.com</td>
+        <td>{{$product->price}}</td>
+        <td>{{$product->pricesale == 0 ? "Không có khuyến mãi":$product->pricesale}}</td>
+        <td>{{$product->created_at}}</td>
+        <td>{{$product->status=1?"On":"Off"}}</td>
       </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+      @endforeach
     </tbody>
   </table>
+  @endsection
 
