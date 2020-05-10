@@ -15,6 +15,7 @@
         <th>Giá Khuyến Mãi</th>
         <th>Người Đăng/Sửa</th>
         <th>Trạng Thái</th>
+        <th>Thao Tác</th>
       </tr>
     </thead>
     <tbody>
@@ -22,11 +23,27 @@
         <tr>
           <td>{{$product->id}}</td>
           <td>{{$product->name}}</td>
-          <td>john@example.com</td>
+          <td><img src="{{asset('/upload/tintuc/'.$product->img)}}" alt="phone"></td>
           <td>{{$product->price}}</td>
           <td>{{$product->pricesale == 0 ? "Không có khuyến mãi":$product->pricesale}}</td>
           <td>{{$product->created_at}}</td>
           <td>{{$product->status=1?"On":"Off"}}</td>
+          <td>
+            <!-- Xóa -->
+              <a href="#">
+                <i class="far fa-trash-alt"></i>
+                <span>Xóa</span>
+              </a>
+            <!-- Sữa -->
+              <a href="#">
+                <i class="fas fa-tools"></i>
+                <span>Sữa</span>
+              </a>
+              <!-- Trạng Thái -->
+              <a href="#">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+          </td>
         </tr>
         @endforeach
     </tbody>
