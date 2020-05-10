@@ -33,9 +33,24 @@ Route::get('/', function () {
        //
        Route::get('adminManageGet','Backend\adminManage@adminManageGet')->name('adminManageGet');
 
+       //Quản Lý Sản Phẩm
+       Route::get('product','Backend\Product@product')->name('product');
+
+       Route::get('them','Backend\Product@them')->name('them');
+       //End Quản Lý Sản Phẩm
+       // Quản Lý Loại 
+        Route::get('catogory','Backend\catogory@catogory')->name('catogory');
+        Route::get('update_category/{id_loai}','Backend\catogory@update_category')->name('update_category');
+
+       // End quản Lý Loại
+
    
    });
 //end login admin
 
 
 
+//end login admin
+
+//404
+Route::get('error','Backend\Error@error')->name('error');

@@ -16,4 +16,5 @@ class adminManage extends Controller
     {
         return view('backend.template');
     }
+
 }

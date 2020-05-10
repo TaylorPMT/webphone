@@ -12,5 +12,17 @@
     background-color: lawngreen;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #343a40;
+    width: 100%;
+}
+
 
 /* end header */
+
+.box-footer {
+    position: fixed;
+    bottom: 0;
+}

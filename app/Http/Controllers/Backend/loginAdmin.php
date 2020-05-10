@@ -20,11 +20,12 @@ class loginAdmin extends Controller
         $password=$request->password;
         if(Auth::attempt(['name' => $user, 'password' => $password,'access'=>1]))
         {
-            return redirect()->route('template');
+            return redirect()->route('adminManageGet');
         }
         else
-        {
-            return redirect()->route('getloginAdmin');
+        { 
+           
+            return redirect()->back()->with("message",["type"=>"danger","msg"=>"Sai mật khẩu or tài khoản"])->withInput();
         }
     }
     
