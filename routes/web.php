@@ -12,7 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//FRONT END ROUTE
+Route::get('index',['as'=>'trangchu','uses'=>'FrontendController@getIndex']);
 
+
+
+
+
+
+//END FRONTEND ROUTE
 Route::get('/', function () {
     return view('backend.loginadmin');
 });
