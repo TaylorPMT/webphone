@@ -18,17 +18,17 @@
       </tr>
     </thead>
     <tbody>
-      @foreach($product as $product)
-      <tr>
-        <td>{{$product->id}}</td>
-        <td>{{$product->name}}</td>
-        <td>john@example.com</td>
-        <td>{{$product->price}}</td>
-        <td>{{$product->pricesale == 0 ? "Không có khuyến mãi":$product->pricesale}}</td>
-        <td>{{$product->created_at}}</td>
-        <td>{{$product->status=1?"On":"Off"}}</td>
-      </tr>
-      @endforeach
+        @foreach($product as $product)
+        <tr>
+          <td>{{$product->id}}</td>
+          <td>{{$product->name}}</td>
+          <td>john@example.com</td>
+          <td>{{$product->price}}</td>
+          <td>{{$product->pricesale == 0 ? "Không có khuyến mãi":$product->pricesale}}</td>
+          <td>{{$product->created_at}}</td>
+          <td>{{$product->status=1?"On":"Off"}}</td>
+        </tr>
+        @endforeach
     </tbody>
   </table>
   @endsection
