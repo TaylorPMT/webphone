@@ -13,7 +13,7 @@
 }
 
 footer {
-    position: fixed;
+    position: static;
     bottom: 0;
     background-color: #343a40;
     width: 100%;
@@ -23,6 +23,6 @@ footer {
 /* end header */
 
 .box-footer {
-    position: fixed;
+    position: static;
     bottom: 0;
 }
