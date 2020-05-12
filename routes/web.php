@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //FRONT END ROUTE
-Route::get('index',['as'=>'trangchu','uses'=>'FrontendController@getIndex']);
+Route::get('/',['as'=>'trangchu','uses'=>'FrontendController@getIndex']);
 
 
 
@@ -21,9 +21,7 @@ Route::get('index',['as'=>'trangchu','uses'=>'FrontendController@getIndex']);
 
 
 //END FRONTEND ROUTE
-Route::get('/', function () {
-    return view('backend.loginadmin');
-});
+
 /* backend */
 // Route Login admin //
    Route::get('login','Backend\loginAdmin@getloginAdmin')->name('getloginAdmin');
