@@ -24,10 +24,10 @@ Route::get('/',['as'=>'trangchu','uses'=>'FrontendController@getIndex']);
 
 /* backend */
 // Route Login admin //
-   Route::get('login','Backend\loginAdmin@getloginAdmin')->name('getloginAdmin');
+   Route::get('admin','Backend\loginAdmin@getloginAdmin')->name('getloginAdmin');
    Route::post('postlogin','Backend\loginAdmin@postloginAdmin')->name('postloginAdmin');
    
-   Route::group(['prefix' => 'admin','middleware'=>'loginAdminmiddleware'], function() {
+   Route::group(['prefix' => 'chucnang','middleware'=>'loginAdminmiddleware'], function() {
        //
        Route::get('adminManageGet','Backend\adminManage@adminManageGet')->name('adminManageGet');
 

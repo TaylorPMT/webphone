@@ -31,7 +31,9 @@
 								<ul>
 									@foreach($menu as $me)
 						<li class="page_menu_item menu_mm"><a href="#">{{$me->name}}<i class="fa fa-angle-down"></i></a></li>
+						
 					@endforeach
+					<li class="page_menu_item menu_mm"><a href="{{ Route('getloginAdmin') }}">Đăng Nhập Admin<i class="fa fa-angle-down"></i></a></li>
 								</ul>
 							</nav>
 							<div class="header_extra ml-auto">
@@ -120,6 +122,7 @@
 					@foreach($menu as $me)
 						<li class="page_menu_item menu_mm"><a href="#">{{$me->name}}<i class="fa fa-angle-down"></i></a></li>
 					@endforeach
+				
 				</ul>
 			</div>
 		</div>

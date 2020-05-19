@@ -26,3 +26,34 @@ footer {
     position: fixed;
     bottom: 0;
 }
+
+
+/* input search */
+
+.input_search[type=text] {
+    width: 130px;
+    height: 25px;
+    border-radius: 6px;
+}
+
+
+/* When the input field gets focus, change its width to 100% */
+
+.input_search[type=text]:focus {
+    width: 100%;
+}
+
+.form__search {
+    margin: 2px 8px;
+}
+
+.box__insert {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+    margin-right: 10px;
+}
+
+.btn-category {
+    border: 2px solid;
+}

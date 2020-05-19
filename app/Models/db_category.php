@@ -8,7 +8,9 @@ class db_category extends Model
 {
     //
     protected $table="db_category";
-
+    protected $fillable=[
+        'name',
+    ];
     public function db_product(){
         return $this->hasMany('App\Models\db_product','id');
     }

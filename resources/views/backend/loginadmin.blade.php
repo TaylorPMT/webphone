@@ -37,6 +37,7 @@
           }
     </style>
 <body>
+    
     <div id="login">
         <h3 class="text-center text-white pt-5">@includeIf('backend.modules.message') </h3>
         
@@ -48,11 +49,11 @@
                             @csrf
                             <h3 class="text-center text-info">Login</h3>
                             <div class="form-group">
-                                <label for="username" class="text-info">Username:</label><br>
+                                <label for="username" class="text-info">Username: admin </label><br>
                                 <input type="text" name="username" id="username" class="form-control" value="{{ old('username') }}">
                             </div>
                             <div class="form-group">
-                                <label for="password" class="text-info">Password:</label><br>
+                                <label for="password" class="text-info">Password: 123456</label><br>
                                 <input type="password" name="password" id="password" class="form-control">
                             </div>
                         

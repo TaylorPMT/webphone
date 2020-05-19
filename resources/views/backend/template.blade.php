@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('backend/css/jquery.dataTables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/css/all.min.css') }}">
     <script src="{{ asset('backend/js/all.min.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{{ asset('backend/js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('backend/js/popper.min.js') }}"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="{{ asset('backend/js/jquery.dataTables.min.js') }}"></script>
