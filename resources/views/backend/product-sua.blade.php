@@ -2,7 +2,6 @@
 @section('title','Thêm Sản Phẩm')
 
 @section('content')
-
 <script>
 function fileValidation(){
     var fileInput = document.getElementById('myFile');
@@ -35,7 +34,7 @@ function fileValidation(){
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <form class="form" method="POST" action="{{Route('postThem')}}" enctype="multipart/form-data"> 
+            <form class="form" method="POST" action="{{Route('postSua',['id'=>$id->id])}}" enctype="multipart/form-data"> 
                 @csrf
                 <!-- #Tên Sản Phẩm -->
                 
@@ -45,7 +44,7 @@ function fileValidation(){
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
                     <label for="nameProduct" class="sr-only">Nhập Tên</label>
-                    <input type="text" class="form-control" id="nameProduct" name="nameProduct" placeholder="Nhập Tên">
+                    <input type="text" class="form-control" id="nameProduct" value="{{$id->name}}" name="nameProduct" placeholder="Nhập Tên">
                 </div>
                 <!-- Loại -->
                 <div class="input-group mb-3" style="margin-top:15px">
@@ -54,7 +53,7 @@ function fileValidation(){
                     </div>
                     
                     <select class="custom-select" id="inputGroupSelect01" name="category">
-                    @foreach($id as $id)
+                    @foreach($cate as $id)
                         <option selected value="{{$id->id}}">{{$id->name}}</option>
                     @endforeach
                     </select>
@@ -67,33 +66,27 @@ function fileValidation(){
                     <div id="imagePreview" style="display:flex;"></div>
                 </div>
                 <!-- Giá Tiền -->
-                <div class="form-group mb-2">
-                    <label for="price" class="sr-only">Giá Tiền</label>
-                    <input type="text" readonly class="form-control-plaintext" id="text " value="Giá Tiền">
+                
+                <div class="form-group mb-2" style="margin-top:20px">
+                    <label for="priceProduct">Nhập Giá</label>
+                    <input value="{{$pricetxt}}" type="number" name="priceProduct" class="form-control" id="priceProduct" style="width:100%;" >
                 </div>
-                <div class="form-group mx-sm-3 mb-2" style="margin-left:50px;margin-top:20px">
-                    <label for="priceProduct" class="sr-only">Nhập Giá</label>
-                    <input type="number" name="priceProduct" class="form-control" id="priceProduct" placeholder="Nhập Giá" style="width:100%;">
-                </div><br>
                 <!-- Giá Khuyến Mãi -->
-                <div class="form mb-2">
-                    <label for="pricesale" class="sr-only">Giá KM</label>
-                    <input type="text" readonly class="form-control-plaintext" id="text " value="Giá Khuyến Mãi">
-                </div>
-                <div class="form mx-sm-3 mb-2" style="margin-left:50px;margin-top:20px">
-                    <label for="pricesaleProduct" class="sr-only">Nhập Giá KM</label>
-                    <input type="number" name="pricesaleProduct" class="form-control" id="pricesaleProduct" placeholder="Nhập Giá KM">
+                <div class="form-group mb-2" style="margin-top:20px">
+                    <label for="pricesaleProduct">Nhập Giá KM</label>
+                    <input value="{{$pricesaletxt}}" type="number" name="pricesaleProduct" class="form-control" id="pricesaleProduct" style="width:100%;" >
                 </div>
 
                 <p>Chi Tiết Sản Phẩm</p>
                 <textarea name="detail" id="detail" cols="30" rows="10" class="detail">
+                {{$detail}}
                     
                 </textarea>
                 <script type="text/javascript">
                          CKEDITOR.replace('detail');
                 </script>
 
-                <button type="submit" class="btn btn-primary">Thêm</button>
+                <button type="submit" class="btn btn-primary">Sữa</button>
             </form>
         </div>
     </div>

@@ -15,6 +15,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="{{ asset('backend/js/jquery.dataTables.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('backend/ckeditor/ckeditor.js') }}"></script>
+
     <title>@yield('title')</title>
           @yield('head')    
 </head>
@@ -40,7 +41,6 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{ Route('catogory') }}">Danh Sách Loại</a>
                             <a class="dropdown-item" href="{{ Route('categoryInsert') }}">Thêm Loại </a>
-                            <a class="dropdown-item" href="#">Link 3</a>
                         </div>
                      </li>
                     <!-- #1  -->
@@ -50,9 +50,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{Route('product')}}">Danh Sách Sản Phẩm</a>
-                            <a class="dropdown-item" href="{{Route('them')}}">Thêm Sản Phẩm</a>
-                            <a class="dropdown-item" href="#">Xóa </a>
-                            <a class="dropdown-item" href="#">Link 3</a>
+                            <a class="dropdown-item" href="{{Route('getThem')}}">Thêm Sản Phẩm</a>
                         </div>
                      </li>
                      <!-- #2  -->
