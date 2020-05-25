@@ -9,6 +9,7 @@ $(document).ready(function() {
             $('#tbodyTable').empty();
             $.each(json, function(i, v) {
 
+
                 var $tr = $('<tr>').append(
 
 
@@ -16,8 +17,8 @@ $(document).ready(function() {
                     $('<td>').html(v.name),
                     $('<td>').html((v.created_at)),
                     $('<td>').html(v.ten_admin_create),
-                    $('<td>').html((v.status == 0) ? "Tắt" : "Hiển Thị")
-
+                    $('<td>').html((v.status == 0) ? "Tắt" : "Hiển Thị"),
+                    $('<td>').html("<a href='" + v.id + "' class='updateStatusCategory btn btn-warning '><i class='fas fa-toggle-on'></i></a>" + "<a href='" + v.id + "' class='updateCategory btn btn-default' >Cập Nhật</a>"),
                 ).appendTo('#tbodyTable');
 
             })

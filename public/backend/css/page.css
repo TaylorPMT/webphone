@@ -13,7 +13,8 @@
 }
 
 footer {
-    position: static;
+    margin-top: 10px;
+    position: fixed;
     bottom: 0;
     background-color: #343a40;
     width: 100%;
@@ -22,9 +23,8 @@ footer {
 
 /* end header */
 
-.box-footer {
-    position: static;
-    bottom: 0;
+#updateStatusCategory {
+    color: red;
 }
 
 
@@ -56,4 +56,9 @@ footer {
 
 .btn-category {
     border: 2px solid;
+}
+
+#radioBtn .notActive {
+    color: #3276b1;
+    background-color: #fff;
 }

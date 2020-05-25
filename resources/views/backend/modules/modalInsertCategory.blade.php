@@ -5,8 +5,10 @@
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
+      <div id="return"class="text-center"></div>
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -32,14 +34,26 @@
                 <input type="text"  class="form-control" id="inputMetaDesc"  name="inputMetaDesc"  required>
                 </div>
             </div>
+            <div class="form-group row">
+           
+              <div class="input-group" style="justify-content: center;">
+            
+                <div id="radioBtn" class="btn-group">
+                  <a class="btn btn-primary btn-sm active" data-toggle="statusCat" data-title="1">Mở</a>
+                  <a class="btn btn-primary btn-sm notActive" data-toggle="statusCat" data-title="0">Tắt</a>
+                </div>
+                <input type="hidden" name="statusCat" id="statusCat">
+              </div>
+          </div>
            
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-primary btn-submit">Thêm</button>
+        <button type="button" class="btn btn-primary btn-submit" id="submitbtn">Thêm</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
-      
+    
       </div>
     </div>
     </form>
+ 
   </div>
 </div>

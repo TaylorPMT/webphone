@@ -6,8 +6,8 @@
 @endsection
 @section('content')
 
-  <h2>Quản Lý Sản Phẩm</h2>
- 
+  <h2>Quản Lý Loại Sản Phẩm</h2>
+
   <div class="row">
       <div class="col">
         <div class="form__search">
@@ -18,6 +18,11 @@
           </form>
         </div>
       </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div id="ketqua"></div>
+    </div>
   </div>
   <table class="table table-dark table-striped my-2">
           <div class="box__insert">
@@ -30,6 +35,7 @@
         <th scope="col">Ngày Tạo</th>
         <th scope="col">Tên Người Tạo</th>
         <th scope="col">Trạng Thái</th>
+        <th scope="col">Thao tác</th>
       </tr>
     </thead>
     <tbody  id="tbodyTable">
@@ -53,6 +59,7 @@
     </tbody>
   </table>
     @includeIf('backend.modules.modalInsertCategory')
+    @includeIf('backend.modules.modalUpdateCategory')
   <div class="container">
    
   
@@ -98,29 +105,17 @@
     </div>
     
   </div>
-  <script>
-      $('.btn-category').click(function(e){
-          e.prevenDefault;
-       });
-  </script>
-  <script>
-      $('.btn-submit').click(function(e){
-          e.preventDefault;
-          var data=$('#insertCategory').serialize();
-          console.log(data);
-       
-          var url='http://127.0.0.1:8000/api/admin/category/';
-          $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-          });
-            $.ajax({
-              
-          
+ 
+  
+  {{--  Load Data refresh  --}}
+  <script src="{{ asset('backend/js/ajax/loadDataAfterInsert.js') }}"></script>
+  {{--  end load refresh  --}}
+  {{--  insert data  --}}
+  <script src="{{ asset('backend/js/ajax/insertDataAjax.js') }}">
 
-            });
-      });
+  </script>
+  {{--  end insert data  --}}
+  <script src="{{ asset('backend/js/ajax/loadDataCategory.js') }}">
   </script>
   {{--  //load ajax api category  --}}
   <script src="{{ asset('backend/js/ajax/loadCategoryApi.js') }}">
@@ -161,10 +156,50 @@
     });
   </script>
   <script>
-    $(document).ready( function () {
-      $('#myTable').DataTable();
-  } );
+    $(document).on("click",".updateStatusCategory",function(event){
+      event.preventDefault();
+      var id=$(this).attr("href");
+    
+      var url='http://127.0.0.1:8000/api/admin/category/'+id;
+      
+        $.ajax({
+          url:url,
+          type:"PUT",
+          success: function(data){
+            $('#ketqua').html('<h4 style="color:green;">'+data.message+'</h4>');
+
+          },
+       }).done(function() {
+        loadDataAfterInsert();
+    });
+    });
+  
   </script>
+ <script>
+  $(document).on("click",".updateCategory",function(event){
+    $('#modal-update').modal('show');
+    event.preventDefault();
+    var id=$(this).attr("href");
+
+    var url='http://127.0.0.1:8000/api/admin/category/'+id;
+   
+   var hr=$.ajax({
+        url:url,
+        type:"GET",
+        dataType: 'json',
+        jsonpCallback: "index",
+        success:function(data){
+         
+          $('input[name="nameCategory"]').val(data.name);
+          $('input[name="inputMetaKey"]').val(data.metakey);
+          $('input[name="inputMetaDesc"]').val(data.metadesc);
+          hr.abort();
+        },
+    });
+    
+    
+  });
+ </script>
   @endsection
 
 
