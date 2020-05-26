@@ -39,7 +39,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{ Route('catogory') }}">Danh Sách Loại</a>
-                            <a class="dropdown-item" href="{{ Route('categoryInsert') }}">Thêm Loại </a>
+                      
                         </div>
                      </li>
                     <!-- #1  -->
@@ -58,9 +58,8 @@
                                         Quản Lý Đơn Hàng
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Thêm Sản Phẩm</a>
-                            <a class="dropdown-item" href="#">Xóa </a>
-                            <a class="dropdown-item" href="#">Link 3</a>
+                            <a class="dropdown-item" href="#">Danh sách đơn hàng</a>
+                           
                         </div>
                      </li>
                      <!-- #3  -->

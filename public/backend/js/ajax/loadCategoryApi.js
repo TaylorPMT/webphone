@@ -18,7 +18,7 @@ $(document).ready(function() {
                     $('<td>').html((v.created_at)),
                     $('<td>').html(v.ten_admin_create),
                     $('<td>').html((v.status == 0) ? "Tắt" : "Hiển Thị"),
-                    $('<td>').html("<a href='" + v.id + "' class='updateStatusCategory btn btn-warning '><i class='fas fa-toggle-on'></i></a>" + "<a href='" + v.id + "' class='updateCategory btn btn-default' >Cập Nhật</a>"),
+                    $('<td>').html("<a href='" + v.id + "' class='updateStatusCategory btn btn-warning btn-category-color'><i class='fas fa-toggle-on'></i></a>" + "<a href='" + v.id + "' class='updateCategorya btn btn-default btn-info btn-category-color' >Cập Nhật</a>" + "<a href='" + v.id + "' class='delete-category btn btn-default btn-danger btn-category-color' >Xóa Loại</a>"),
                 ).appendTo('#tbodyTable');
 
             })

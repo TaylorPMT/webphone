@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Exception;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use App\Library\library;
+use App\Models\db_product;
 use Dotenv\Validator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -121,6 +122,7 @@ class category extends Controller
             ->join('db_user','db_category.created_by','=','db_user.id')->select('db_category.*','db_user.fullname as ten_admin_create')
             ->firstOrFail();
             return $searchId;
+            
         
         } catch (Exception  $e) {
         
@@ -143,30 +145,71 @@ class category extends Controller
     public function update(Request $request, $id)
     {
         //
-        return db_category::find($id);
-        /*try{
+      
+            
+        try{
 
-       
-        $update=db_category::find($id);
-        if($update->status ==0)
-        {
-            $update->status=1;
+     
+        if($request->all()==[])
+        {  
+            $updateDbcategory=db_category::find($id);
+                if($updateDbcategory->status ==0)
+                {
+                    $updateDbcategory->status=1;
+                }else
+                {
+                    $updateDbcategory->status=0;
+                }
+            
+                $updateDbcategory->save();
+                return [
+                    "message"=>"Success Update Status",
+                    "dataCategory"=>$updateDbcategory,
+                ];
         }else
-        {
-            $update->status=0;
+        {  
+            $updateDbcategory=db_category::find($id);
+            $nameCategory=$request->get('nameCategoryUpdate');
+            $inputMetaKey=$request->get('inputMetaKeyUpdate');
+            $inputMetaDesc=$request->get('inputMetaDescUpdate');
+            $inputStatus=$request->get('statusUpdate');
+            if($inputStatus=='on'){
+                $inputStatus='1';
+            }else
+            {
+                $inputStatus='0';
+            }
+           
+            $updateDbcategory->name=$nameCategory;
+            $updateDbcategory->slug=Str::slug($nameCategory,'-');
+            $updateDbcategory->parentid=0;
+            $updateDbcategory->orders=0;
+            $updateDbcategory->metakey=html_entity_decode($inputMetaKey);
+            $updateDbcategory->metadesc=html_entity_decode($inputMetaDesc);
+         
+            $updateDbcategory->created_by=1;
+            $updateDbcategory->updated_by=1;
+            $updateDbcategory->status=$inputStatus;
+            if($updateDbcategory->save())
+            {
+                $message = [ 
+                        'succcess'=>'Update thành công',
+               
+                ];
+                 return $message;
+            }else
+            {
+                $message = ['error'=>'Update thành công'];
+                return $message;
+            }
+            
         }
-       
-        $update->save();
-        return [
-            "message"=>"Success Update Status",
-            "dataCategory"=>$update,
-        ];
          }catch(Exception $e)
          {
              $message =['error'=>'Lỗi phát sinh '];
              return $message;
          }
-        */
+        
       
     }
 
@@ -178,10 +221,31 @@ class category extends Controller
      */
     public function destroy($id)
     {
-     
-        
- 
-
+        try{
+            $findCategory= db_category::findOrFail($id);
+            $idCategory=$findCategory->id;
+            $checkProductsCategory=db_product::where('catid','=',$idCategory)->first();
+            if(!$checkProductsCategory)
+            {
+                $findCategory->delete();
+                return [
+                        'succcess'=>'Xóa Thành Công',
+    
+                ];
+            }else
+            {
+                return[
+                    'error'=>'Không Thể Xóa Do Còn Sản Phẩm Liên Quan',
+                ];
+            }
+            return $checkProductsCategory;
+    
+        }catch(Exception $e)
+        {
+            $message =['error'=>'Lỗi phát sinh '];
+            return $message;
+        }
+      
     }
     public function searchName($name)
     {

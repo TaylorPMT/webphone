@@ -126,79 +126,37 @@
   </script>
   {{--  end search category  --}}
 
-  <script>
-  
-    $('#update__loai').click(function(event)
-    {
-      event.preventDefault();
-      var url = $(this).attr('href');
-      
-            $.ajax({
-              url: url,
-              type: 'GET',
-              dataType: 'html',
-          })
-          .done(function(response) {
-              if(response ==1)
-              {
-            setTimeout(function(){
-              $('#myModal').modal('show');
-             },1000) // 3 seconds.
-        
-          
-            setInterval('window.location.reload()', 2000);
-             }else
-             {
-               alert ("Lỗi phát sinh");
-             }
-          
-          });
-    });
-  </script>
-  <script>
-    $(document).on("click",".updateStatusCategory",function(event){
-      event.preventDefault();
-      var id=$(this).attr("href");
-    
-      var url='http://127.0.0.1:8000/api/admin/category/'+id;
-      
-        $.ajax({
-          url:url,
-          type:"PUT",
-          success: function(data){
-            $('#ketqua').html('<h4 style="color:green;">'+data.message+'</h4>');
-
-          },
-       }).done(function() {
-        loadDataAfterInsert();
-    });
-    });
-  
-  </script>
+  {{--  update status and update lại category  --}}
+ <script src="{{ asset('backend/js/ajax/updateStatusUpdateCategory.js') }}">
+ 
+ </script>
+ {{--  end update status and update lại category  --}}
  <script>
-  $(document).on("click",".updateCategory",function(event){
-    $('#modal-update').modal('show');
-    event.preventDefault();
-    var id=$(this).attr("href");
-
-    var url='http://127.0.0.1:8000/api/admin/category/'+id;
-   
-   var hr=$.ajax({
-        url:url,
-        type:"GET",
-        dataType: 'json',
-        jsonpCallback: "index",
-        success:function(data){
-         
-          $('input[name="nameCategory"]').val(data.name);
-          $('input[name="inputMetaKey"]').val(data.metakey);
-          $('input[name="inputMetaDesc"]').val(data.metadesc);
-          hr.abort();
-        },
+    $(document).on("click",".delete-category",function(event){
+        event.preventDefault();
+        var id=$(this).attr("href");
+        var url = 'http://127.0.0.1:8000/api/admin/category/'+id;
+        console.log(url);
+        $.ajax({
+            url:url,
+            type:"DELETE",
+            dataType:"JSON",
+            success:function(data){
+              console.log(data);
+              if (typeof data.error !== 'undefined') {
+                $('#ketqua').html('<h4 style="color:red;">Không Thể Xóa Do Còn Sản Phẩm Liên Quan</h4>');
+              } else {
+  
+                  console.log(data.dataProductsNew);
+               
+                  $('#ketqua').html('<h4 style="color:green;">Xóa Thành Công</h4>');
+  
+              }
+            }
+        }).done(function(){
+          loadDataAfterInsert();
+        });
     });
-    
-    
-  });
  </script>
   @endsection
 

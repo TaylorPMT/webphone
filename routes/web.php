@@ -51,7 +51,8 @@ Route::get('/',['as'=>'trangchu','uses'=>'FrontendController@getIndex']);
         Route::post('postcategoryInsert','Backend\catogory@postcategoryInsert')->name('postcategoryInsert');
 
        // End quản Lý Loại
-
+       //quản lý đơn hàng
+        Route::get('orderUser','Backend\orderUser@index')->name('orderUser');
    
    });
 //end login admin
