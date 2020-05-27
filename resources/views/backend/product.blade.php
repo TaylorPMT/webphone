@@ -1,6 +1,6 @@
 @extends('backend.template')
 @section('title','Quản Lý Sản Phẩm')
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
 @section('content')
 
   <h2>Quản Lý Sản Phẩm</h2>
@@ -60,25 +60,19 @@
         
     </tbody>
   </table>
-
   <script>
     $(document).ready(function(){        
       $.ajax({
-        url:"http://localhost:8000/api/product",
+        url:"http://127.0.0.1:8000/api/admin/product",
         dataType:"json",
-        method:"GET",
+        type:"GET",
         data:"json",
+        // success:function(list){
+          
+        // }
         success: function(list){
-           // console.log(list);
-          $.each(list.data,function(k,v){
-          // console.log(v.id);
-          // if(v.img == ""){
-          // }
-          // var img="{{asset("upload/tintuc")}}/"+v.img;
-          // console.log(img);           
-          // var rootImg="<img src="+img+">";            
-          //console.log(rootImg);
-                   
+          $.each(list,function(k,v){     
+            
             $('<tr>').append(
               $('<td>').html(v.id),
               $('<td>').html(v.name),
@@ -96,21 +90,24 @@
       })
     })
   </script>
+  
   <script>
         $(document).on("click",".btn-delete",function(){
-          var id=$(this).data('id');
+          var id=$(this).data("id");
           var el=this;
+          
           // var token = $(this).data("token");
-          // $.ajaxSetup({
-          //   headers: {
-          //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-          //   }
-          // });
+          $.ajaxSetup({
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+          });
           $.ajax({
-            url:'http://localhost:8000/api/product/'+id,
-            type:'delete',
-            dataType:"JSON",
+            url:'http://127.0.0.1:8000/api/admin/product/'+id,
             
+            type:"delete",
+            dataType:"JSON",
+            contentType: 'application/json',
             data: {
                 id: id,
                 "_token": "{{ csrf_token() }}"
@@ -123,6 +120,7 @@
               alert("Xóa Thất Bại!! Tin Tức Đang Được Hiển Thị");
             }
           });
+          
         })
   </script>
   @endsection

@@ -14,20 +14,23 @@ class Product extends JsonResource
      */
     public function toArray($request)
     {
-        return [
+        return 
+             [
+                 
+                    "id" =>$this->id,
+                    "name"=>$this->name,
+                    "price"=>$this->price,
+                    "pricesale"=>$this->pricesale,
+                    "catid"=>$this->catid,
+                    "status"=>$this->status,
+                    "created_at"=>$this->created_at,
+                    "img"=>$this->img,
+                    "metakey"=>$this->metakey,
+                    "metadesc"=>$this->metadesc,
             
-                'id' =>$this->id,
-                "name"=>$this->name,
-                "price"=>$this->price,
-                "pricesale"=>$this->pricesale,
-                "catid"=>$this->catid,
-                "status"=>$this->status,
-                "created_at"=>$this->created_at,
-                "img"=>$this->img,
-                "metakey"=>$this->metakey,
-                "metadesc"=>$this->metadesc,
-               
-        ];
+                
+            ];
+        
         
     }
     

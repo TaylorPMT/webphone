@@ -24,7 +24,7 @@ class ProductController extends Controller
     public function index()
     {
         //
-           $product= db_product::all();
+            $product= db_product::all();
         return Productres::collection($product);
           
         
@@ -40,35 +40,47 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         try{
-            db_product::created($request->all());
-            return ("ok");
-        // $product=new db_product;
-        // $product->catid=$request->category;
-        // $product->slug=Str::slug($request->name,'-');
-        // if($request->hasFile('file'))
-    	// {
-    	// 		$file=$request->file('file');
-    	// 		$name=$file->getClientOriginalName();
-    	// 		$hinh=str::random(4)."_".$name;
-    	// 		while ( file_exists("upload/tintuc/".$hinh)) {
-    	// 			$hinh=str_random(4)."_".$name;
-    	// 		}
-    	// 		$file->move("upload/tintuc/",$hinh);
-    	// 		$product->img=$hinh;    			
-    	// }
-    	// else
-    	// {
-    	// 	$product->img="";
-    	// }
-        // $product->number=0;
-        // $product->metakey="abc";
-        // $product->metadesc="abc";
-        // $product->created_at=Carbon::now();
-        // $product->updated_at=Carbon::now();
-        // $product->save();
-        // return $product;
+        $product=new db_product;
+        $product->name=$request->nameProduct;
+        $product->price=$request->priceProduct;
+        $product->pricesale=$request->pricesaleProduct;
+        $product->catid=$request->category;
+        $product->detail=$request->detail;
+        $product->slug=Str::slug($request->nameProduct,'-');
+        if($request->hasFile('file'))
+    	{
+    			$file=$request->file('file');
+    			$name=$file->getClientOriginalName();
+    			$hinh=str::random(4)."_".$name;
+    			while ( file_exists("upload/tintuc/".$hinh)) {
+    				$hinh=Str::random(4)."_".$name;
+    			}
+    			$file->move("upload/tintuc/",$hinh);
+                $product->img=$hinh;    		
+    	}
+    	else
+    	{
+             $product->img="";
+            //return(" not ok");	
+        }
+        $product->number=0;
+        $product->metakey="abc";
+        $product->metadesc="abc";
+        $product->created_at=Carbon::now();
+        $product->updated_at=Carbon::now();
+        $product->save();
+         //return $product;
+         return response()->json([
+             "status"=>"201",
+             "message"=>"Created Success",
+         ]);
     }catch(Exception $e){
-        return ("not ok");
+        return response()->json([
+            "status"=>"500",
+            "message"=>"Created Fail",
+        ]);
+    }
+         //return $product;
     }
        // $product->save();
         //return $product;
@@ -76,7 +88,7 @@ class ProductController extends Controller
         
         
        
-    }
+    
 
     /**
      * Display the specified resource.
