@@ -32,10 +32,11 @@ Route::get('/',['as'=>'trangchu','uses'=>'FrontendController@getIndex']);
        Route::get('adminManageGet','Backend\adminManage@adminManageGet')->name('adminManageGet');
 
        //Quản Lý Sản Phẩm
-       Route::get('product','Backend\Product@product')->name('product');
+        Route::get('product','Backend\Product@product')->name('product');
 
-       Route::get('them','Backend\Product@getThem')->name('getThem');
-       Route::post('postthem','Backend\Product@postThem')->name('postThem');
+        Route::get('them','Backend\Product@getThem')->name('getThem');
+        Route::post('postthem','Backend\Product@postThem')->name('postThem');
+       
 
        Route::get('xoa/{id}','Backend\Product@getXoa')->name('getXoa');
 
