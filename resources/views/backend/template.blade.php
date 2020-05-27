@@ -6,14 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
    
     <link rel="stylesheet" href="{{ asset('backend/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('backend/css/normalize.min.css.map') }}">
     <link rel="stylesheet" href="{{ asset('backend/css/page.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/css/jquery.dataTables.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/css/all.min.css') }}">
     <script src="{{ asset('backend/js/all.min.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="{{ asset('backend/js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('backend/js/popper.min.js') }}"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="{{ asset('backend/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('backend/js/jquery.dataTables.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('backend/ckeditor/ckeditor.js') }}"></script>
 
@@ -41,7 +40,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{ Route('catogory') }}">Danh Sách Loại</a>
-                            <a class="dropdown-item" href="{{ Route('categoryInsert') }}">Thêm Loại </a>
+                      
                         </div>
                      </li>
                     <!-- #1  -->
@@ -60,9 +59,8 @@
                                         Quản Lý Đơn Hàng
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Thêm Sản Phẩm</a>
-                            <a class="dropdown-item" href="#">Xóa </a>
-                            <a class="dropdown-item" href="#">Link 3</a>
+                            <a class="dropdown-item" href="#">Danh sách đơn hàng</a>
+                           
                         </div>
                      </li>
                      <!-- #3  -->

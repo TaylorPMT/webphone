@@ -23,3 +23,7 @@ Route::apiResource('product', 'Api\ProductController');
 
  //Route::delete('/delete/{id}','ProductController@destroy');
 
+Route::group(['prefix' => 'admin'], function() {
+    Route::apiResource('category', 'api\category');
+    Route::get('search/{name}','api\category@searchName');
+});

@@ -24,10 +24,10 @@ Route::get('/',['as'=>'trangchu','uses'=>'FrontendController@getIndex']);
 
 /* backend */
 // Route Login admin //
-   Route::get('login','Backend\loginAdmin@getloginAdmin')->name('getloginAdmin');
+   Route::get('admin','Backend\loginAdmin@getloginAdmin')->name('getloginAdmin');
    Route::post('postlogin','Backend\loginAdmin@postloginAdmin')->name('postloginAdmin');
    
-   Route::group(['prefix' => 'admin','middleware'=>'loginAdminmiddleware'], function() {
+   Route::group(['prefix' => 'chucnang','middleware'=>'loginAdminmiddleware'], function() {
        //
        Route::get('adminManageGet','Backend\adminManage@adminManageGet')->name('adminManageGet');
 
@@ -52,7 +52,8 @@ Route::get('/',['as'=>'trangchu','uses'=>'FrontendController@getIndex']);
         Route::post('postcategoryInsert','Backend\catogory@postcategoryInsert')->name('postcategoryInsert');
 
        // End quản Lý Loại
-
+       //quản lý đơn hàng
+        Route::get('orderUser','Backend\orderUser@index')->name('orderUser');
    
    });
 //end login admin
