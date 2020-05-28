@@ -53,7 +53,15 @@ Route::get('/',['as'=>'trangchu','uses'=>'FrontendController@getIndex']);
        // End quản Lý Loại
        //quản lý đơn hàng
         Route::get('orderUser','Backend\orderUser@index')->name('orderUser');
-   
+        Route::get('orderdetail/{code}','Backend\orderUser@orderdetail')->name('orderdetail');
+        Route::get('approved','Backend\orderUser@approved')->name('approved');
+        Route::get('errorloi','Backend\orderUser@error')->name('errordonhang');
+        Route::get('status/{code}','Backend\orderUser@status')->name('status');
+        Route::get('error/{code}','Backend\orderUser@errorsatus')->name('orderdetail-error');
+        //Route Api GeoCode
+        Route::get('mapapigeocode','Backend\ApiGeocode@index')->name('mapapigeocode');
+        Route::post('searchmapgeocode','Backend\ApiGeocode@searchmap')->name('searchmapgeocode');
+
    });
 //end login admin
 

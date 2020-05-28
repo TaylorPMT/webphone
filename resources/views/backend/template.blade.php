@@ -19,9 +19,10 @@
           @yield('head')    
 </head>
 <body>
+    <div class="container-fluid box__app">
     <header class="box-header">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row row-header__banner">
                 <div class="box-header__banner">
                     <div class="col-md-12">
                         this is a banner
@@ -58,7 +59,7 @@
                                         Quản Lý Đơn Hàng
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Danh sách đơn hàng</a>
+                            <a class="dropdown-item" href="{{ Route('orderUser') }}">Danh sách đơn hàng</a>
                            
                         </div>
                      </li>
@@ -84,6 +85,9 @@
                             <a class="dropdown-item" href="#">Link 3</a>
                         </div>
                      </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="{{ Route('mapapigeocode') }}">Load Google Map</a>
+                     </li>
                  </ul>
             </nav>
         </div>
@@ -94,11 +98,15 @@
     </main>
 
     <footer class="box-footer">
-        this is footer
+       
+        <div class="row">
+            <div class="col-12">this is footer</div>
+        </div>
+      
     </footer>
 
 
-
+</div>
 
   
     @yield('script')

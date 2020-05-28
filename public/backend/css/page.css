@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+.box__app {
+    position: relative;
+}
+
 
 /* header page */
 
@@ -12,12 +16,19 @@
     background-color: lawngreen;
 }
 
+.row-header__banner {
+    background-color: slategray;
+}
+
+main {
+    min-height: 80vh;
+}
+
 footer {
     margin-top: 10px;
-    position: fixed;
     bottom: 0;
+    position: relative;
     background-color: #343a40;
-    width: 100%;
 }
 
 
