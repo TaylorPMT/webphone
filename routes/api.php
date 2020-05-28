@@ -17,7 +17,18 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+
+
 Route::group(['prefix' => 'admin'], function() {
     Route::apiResource('category', 'api\category');
     Route::get('search/{name}','api\category@searchName');
+    
+    Route::get('product','Api\ProductController@product')->name('product');
+    Route::apiResource('product', 'Api\ProductController');
+    Route::post('postthem','Backend\Product@store')->name('postThem');
+    //Route::delete('product/delete/{id}','ProductController@destroy');
+    
 });

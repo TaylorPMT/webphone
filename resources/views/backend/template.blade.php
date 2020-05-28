@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
     <link rel="stylesheet" href="{{ asset('backend/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/css/page.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/css/jquery.dataTables.min.css') }}">
@@ -50,7 +51,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{Route('product')}}">Danh Sách Sản Phẩm</a>
-                            <a class="dropdown-item" href="{{Route('getThem')}}">Thêm Sản Phẩm</a>
+                        <a class="dropdown-item" href="{{Route('getThem')}}">Thêm Sản Phẩm</a>
                         </div>
                      </li>
                      <!-- #2  -->

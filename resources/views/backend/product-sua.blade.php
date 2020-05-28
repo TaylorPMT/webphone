@@ -62,7 +62,13 @@ function fileValidation(){
                 <!-- Hình Ảnh -->
                 <div class="custom-file mb-3">
                     <span>Hình Ảnh:</span>
-                    <input type="file" id="myFile" name="file" style="margin-left:50px;margin-top:20px" onchange="return fileValidation()">
+                    <input 
+                        type="file" 
+                        id="myFile" 
+                        name="file" 
+                        style="margin-left:50px;margin-top:20px" 
+                        onchange="return fileValidation()"
+                    >
                     <div id="imagePreview" style="display:flex;"></div>
                 </div>
                 <!-- Giá Tiền -->
