@@ -14,6 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 //FRONT END ROUTE
 Route::get('index',['as'=>'trangchu','uses'=>'FrontendController@getIndex']);
+Route::get('hang/{id}',['as'=>'hang','uses'=>'FrontendController@hang']);
+Route::get('sanpham/{id}',['as'=>'sanpham','uses'=>'FrontendController@getSanpham']);
+Route::get('giohang',['as'=>'giohang','uses'=>'FrontendController@giohang']);
+Route::get('lienhe',['as'=>'lienhe','uses'=>'FrontendController@lienhe']);
+Route::get('gioithieu',['as'=>'gioithieu','uses'=>'FrontendController@gioithieu']);
+
+
+
+
+
+Route::post('/save-cart','CartController@addCart');
+Route::get('/show-cart',['as'=>'showcart','uses'=>'FrontendController@show_cart']);
+Route::get('/delete-to-cart/{rowId}','FrontendController@delete_to_cart');
 
 
 
