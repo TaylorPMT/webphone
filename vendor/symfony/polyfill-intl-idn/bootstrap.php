@@ -11,6 +11,13 @@
 
 use Symfony\Polyfill\Intl\Idn as p;
 
+<<<<<<< HEAD
+=======
+if (extension_loaded('intl')) {
+    return;
+}
+
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 if (!defined('U_IDNA_PROHIBITED_ERROR')) {
     define('U_IDNA_PROHIBITED_ERROR', 66560);
 }

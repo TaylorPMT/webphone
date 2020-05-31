@@ -5,8 +5,13 @@ namespace Illuminate\Support\Facades;
 use Illuminate\Contracts\Auth\PasswordBroker;
 
 /**
+<<<<<<< HEAD
  * @method static string sendResetLink(array $credentials)
  * @method static mixed reset(array $credentials, \Closure $callback)
+=======
+ * @method static mixed reset(array $credentials, \Closure $callback)
+ * @method static string sendResetLink(array $credentials)
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
  *
  * @see \Illuminate\Auth\Passwords\PasswordBroker
  */

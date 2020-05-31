@@ -1322,6 +1322,7 @@ section
 .footer_social ul li a i:hover
 {
 	color: #FFFFFF;
+<<<<<<< HEAD
 }
 .loginbox{
 	width: 320px;
@@ -1399,3 +1400,6 @@ input#submit {
 	float: right;
 }
 
+=======
+}
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a

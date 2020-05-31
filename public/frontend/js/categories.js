@@ -230,6 +230,7 @@ $(document).ready(function()
 	        });
 		}
 	}
+<<<<<<< HEAD
 	function validateForm(){
 		var name = .loginbox [type="text"].length;
 		var pass = .loginbox [type="password"].length;
@@ -239,5 +240,7 @@ $(document).ready(function()
 			alert('mật khẩu rỗng');
 		return true;
 	}
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
 });

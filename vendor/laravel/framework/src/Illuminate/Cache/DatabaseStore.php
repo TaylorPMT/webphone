@@ -7,6 +7,10 @@ use Exception;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\PostgresConnection;
+<<<<<<< HEAD
+=======
+use Illuminate\Database\QueryException;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 use Illuminate\Support\InteractsWithTime;
 use Illuminate\Support\Str;
 
@@ -116,9 +120,13 @@ class DatabaseStore implements Store
     public function put($key, $value, $seconds)
     {
         $key = $this->prefix.$key;
+<<<<<<< HEAD
 
         $value = $this->serialize($value);
 
+=======
+        $value = $this->serialize($value);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         $expiration = $this->getTime() + $seconds;
 
         try {
@@ -131,6 +139,38 @@ class DatabaseStore implements Store
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Store an item in the cache if the key doesn't exist.
+     *
+     * @param  string  $key
+     * @param  mixed  $value
+     * @param  int  $seconds
+     * @return bool
+     */
+    public function add($key, $value, $seconds)
+    {
+        $key = $this->prefix.$key;
+        $value = $this->serialize($value);
+        $expiration = $this->getTime() + $seconds;
+
+        try {
+            return $this->table()->insert(compact('key', 'value', 'expiration'));
+        } catch (QueryException $e) {
+            return $this->table()
+                ->where('key', $key)
+                ->where('expiration', '<=', $this->getTime())
+                ->update([
+                    'value' => $value,
+                    'expiration' => $expiration,
+                ]) >= 1;
+        }
+
+        return false;
+    }
+
+    /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Increment the value of an item in the cache.
      *
      * @param  string  $key

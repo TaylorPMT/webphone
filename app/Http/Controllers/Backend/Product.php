@@ -18,8 +18,15 @@ class Product extends Controller
     }
 
     public function getThem(){
+<<<<<<< HEAD
         $id=db_category::where('status','=',1)->select('id','name')->get();    
         return view('backend.product-them',compact('id'));
+=======
+        $id=db_category::where('status','=',1)->select('id','name')->get();  
+        
+        return view('backend.product-them',compact('id'));
+        
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     }
 
     public function postThem(Request $request){
@@ -52,6 +59,7 @@ class Product extends Controller
     	return redirect()->Route('getThem')->with("message",["type"=>"success","msg"=>"Thêm Thành Công!!"]);    
     }
 
+<<<<<<< HEAD
     public function getXoa($id){
         $product=db_product::find($id);
         if($product==null)
@@ -70,6 +78,26 @@ class Product extends Controller
                 return redirect()->Route('product')->with("message",["type"=>"danger","msg"=>"Tin Đang Hiện Không Thể Xóa"]);
             }
         }
+=======
+    // public function getXoa($id){
+    //     $product=db_product::find($id);
+    //     if($product==null)
+    //       return redirect()->Route('product')->with("message",["type"=>"danger","msg"=>"Không tồn tại sản phẩm!!"]);
+    //     if(($product->status)==0)
+    //     {
+    //         $product->delete();
+    //         if (file_exists('upload/tintuc/'. $product->img))
+    //           {
+    //               unlink("upload/tintuc/".$product->img);
+    //           }
+    //           return redirect()->Route('product')->with("message",["type"=>"success","msg"=>"Xóa Thành Công!!"]);
+    //     }
+    //         else
+    //         {
+    //             return redirect()->Route('product')->with("message",["type"=>"danger","msg"=>"Tin Đang Hiện Không Thể Xóa"]);
+    //         }
+    //     }
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     public function getSua($id){
         $id=db_product::find($id);
         $pricetxt=$id->price;

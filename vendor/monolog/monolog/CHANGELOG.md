@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+=======
+### 2.1.0 (2020-05-22)
+
+  * Added `JSON_INVALID_UTF8_SUBSTITUTE` to default json flags, so that invalid UTF8 characters now get converted to [�](https://en.wikipedia.org/wiki/Specials_(Unicode_block)#Replacement_character) instead of being converted from ISO-8859-15 to UTF8 as it was before, which was hardly a comprehensive solution
+  * Added `$ignoreEmptyContextAndExtra` option to JsonFormatter to skip empty context/extra entirely from the output
+  * Added `$parseMode`, `$disableWebPagePreview` and `$disableNotification` options to TelegramBotHandler
+  * Added tentative support for PHP 8
+  * NormalizerFormatter::addJsonEncodeOption and removeJsonEncodeOption are now public to allow modifying default json flags
+  * Fixed GitProcessor type error when there is no git repo present
+  * Fixed normalization of SoapFault objects containing deeply nested objects as "detail"
+  * Fixed support for relative paths in RotatingFileHandler
+
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 ### 2.0.2 (2019-12-20)
 
   * Fixed ElasticsearchHandler swallowing exceptions details when failing to index log records
@@ -67,6 +81,15 @@
   * Added support for the PHP 7.x `mongodb` extension in the MongoDBHandler
   * Fixed many minor issues in various handlers, and probably added a few regressions too
 
+<<<<<<< HEAD
+=======
+### 1.25.4 (2020-05-22)
+
+  * Fixed GitProcessor type error when there is no git repo present
+  * Fixed normalization of SoapFault objects containing deeply nested objects as "detail"
+  * Fixed support for relative paths in RotatingFileHandler
+
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 ### 1.25.3 (2019-12-20)
 
   * Fixed formatting of resources in JsonFormatter

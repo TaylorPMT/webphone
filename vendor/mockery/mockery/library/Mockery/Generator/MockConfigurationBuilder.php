@@ -72,9 +72,13 @@ class MockConfigurationBuilder
 
     public function __construct()
     {
+<<<<<<< HEAD
         if (version_compare(PHP_VERSION, '7.0.0') >= 0) {
             $this->blackListedMethods = array_diff($this->blackListedMethods, $this->php7SemiReservedKeywords);
         }
+=======
+        $this->blackListedMethods = array_diff($this->blackListedMethods, $this->php7SemiReservedKeywords);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     }
 
     public function addTarget($target)

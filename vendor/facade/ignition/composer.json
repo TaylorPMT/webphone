@@ -16,7 +16,11 @@
         "facade/flare-client-php": "^1.0",
         "facade/ignition-contracts": "^1.0",
         "filp/whoops": "^2.4",
+<<<<<<< HEAD
         "illuminate/support": "^7.0",
+=======
+        "illuminate/support": "^7.0|^8.0",
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         "monolog/monolog": "^2.0",
         "scrivo/highlight.php": "^9.15",
         "symfony/console": "^5.0",

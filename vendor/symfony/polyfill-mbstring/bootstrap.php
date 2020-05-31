@@ -11,6 +11,7 @@
 
 use Symfony\Polyfill\Mbstring as p;
 
+<<<<<<< HEAD
 if (!defined('MB_CASE_UPPER')) {
     define('MB_CASE_UPPER', 0);
 }
@@ -21,6 +22,8 @@ if (!defined('MB_CASE_TITLE')) {
     define('MB_CASE_TITLE', 2);
 }
 
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 if (!function_exists('mb_convert_encoding')) {
     function mb_convert_encoding($s, $to, $from = null) { return p\Mbstring::mb_convert_encoding($s, $to, $from); }
 }
@@ -135,3 +138,20 @@ if (!function_exists('mb_scrub')) {
 if (!function_exists('mb_str_split')) {
     function mb_str_split($string, $split_length = 1, $encoding = null) { return p\Mbstring::mb_str_split($string, $split_length, $encoding); }
 }
+<<<<<<< HEAD
+=======
+
+if (extension_loaded('mbstring')) {
+    return;
+}
+
+if (!defined('MB_CASE_UPPER')) {
+    define('MB_CASE_UPPER', 0);
+}
+if (!defined('MB_CASE_LOWER')) {
+    define('MB_CASE_LOWER', 1);
+}
+if (!defined('MB_CASE_TITLE')) {
+    define('MB_CASE_TITLE', 2);
+}
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a

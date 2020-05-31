@@ -36,7 +36,11 @@ class Kernel implements KernelContract
     /**
      * The Artisan application instance.
      *
+<<<<<<< HEAD
      * @var \Illuminate\Console\Application
+=======
+     * @var \Illuminate\Console\Application|null
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      */
     protected $artisan;
 

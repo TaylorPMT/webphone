@@ -11,6 +11,13 @@
 
 use Symfony\Polyfill\Iconv as p;
 
+<<<<<<< HEAD
+=======
+if (extension_loaded('iconv')) {
+    return;
+}
+
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 if (!defined('ICONV_IMPL')) {
     define('ICONV_IMPL', 'Symfony');
 }

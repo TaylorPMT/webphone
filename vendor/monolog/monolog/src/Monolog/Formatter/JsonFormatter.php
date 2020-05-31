@@ -11,7 +11,10 @@
 
 namespace Monolog\Formatter;
 
+<<<<<<< HEAD
 use Monolog\Utils;
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 use Throwable;
 
 /**
@@ -28,16 +31,28 @@ class JsonFormatter extends NormalizerFormatter
 
     protected $batchMode;
     protected $appendNewline;
+<<<<<<< HEAD
+=======
+    protected $ignoreEmptyContextAndExtra;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
     /**
      * @var bool
      */
     protected $includeStacktraces = false;
 
+<<<<<<< HEAD
     public function __construct(int $batchMode = self::BATCH_MODE_JSON, bool $appendNewline = true)
     {
         $this->batchMode = $batchMode;
         $this->appendNewline = $appendNewline;
+=======
+    public function __construct(int $batchMode = self::BATCH_MODE_JSON, bool $appendNewline = true, bool $ignoreEmptyContextAndExtra = false)
+    {
+        $this->batchMode = $batchMode;
+        $this->appendNewline = $appendNewline;
+        $this->ignoreEmptyContextAndExtra = $ignoreEmptyContextAndExtra;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     }
 
     /**
@@ -68,11 +83,28 @@ class JsonFormatter extends NormalizerFormatter
     public function format(array $record): string
     {
         $normalized = $this->normalize($record);
+<<<<<<< HEAD
         if (isset($normalized['context']) && $normalized['context'] === []) {
             $normalized['context'] = new \stdClass;
         }
         if (isset($normalized['extra']) && $normalized['extra'] === []) {
             $normalized['extra'] = new \stdClass;
+=======
+
+        if (isset($normalized['context']) && $normalized['context'] === []) {
+            if ($this->ignoreEmptyContextAndExtra) {
+                unset($normalized['context']);
+            } else {
+                $normalized['context'] = new \stdClass;
+            }
+        }
+        if (isset($normalized['extra']) && $normalized['extra'] === []) {
+            if ($this->ignoreEmptyContextAndExtra) {
+                unset($normalized['extra']);
+            } else {
+                $normalized['extra'] = new \stdClass;
+            }
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         }
 
         return $this->toJson($normalized, true) . ($this->appendNewline ? "\n" : '');

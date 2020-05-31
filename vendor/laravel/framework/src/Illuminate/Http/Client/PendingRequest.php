@@ -388,6 +388,23 @@ class PendingRequest
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Issue a HEAD request to the given URL.
+     *
+     * @param  string  $url
+     * @param  array|string|null  $query
+     * @return \Illuminate\Http\Client\Response
+     */
+    public function head(string $url, $query = null)
+    {
+        return $this->send('HEAD', $url, [
+            'query' => $query,
+        ]);
+    }
+
+    /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Issue a POST request to the given URL.
      *
      * @param  string  $url

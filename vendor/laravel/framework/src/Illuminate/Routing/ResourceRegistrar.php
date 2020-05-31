@@ -389,6 +389,13 @@ class ResourceRegistrar
             $action['middleware'] = $options['middleware'];
         }
 
+<<<<<<< HEAD
+=======
+        if (isset($options['excluded_middleware'])) {
+            $action['excluded_middleware'] = $options['excluded_middleware'];
+        }
+
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         return $action;
     }
 

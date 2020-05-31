@@ -170,7 +170,11 @@ class RouteListCommand extends Command
      */
     protected function getMiddleware($route)
     {
+<<<<<<< HEAD
         return collect($route->gatherMiddleware())->map(function ($middleware) {
+=======
+        return collect($this->router->gatherRouteMiddleware($route))->map(function ($middleware) {
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             return $middleware instanceof Closure ? 'Closure' : $middleware;
         })->implode(',');
     }

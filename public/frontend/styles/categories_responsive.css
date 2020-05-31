@@ -31,6 +31,7 @@
 	{
 		display: none;
 	}
+<<<<<<< HEAD
 	.loginbox{
 	width: 320px;
 	height: 350px;
@@ -146,6 +147,8 @@ input#summit::hover{
 	margin-left: 50%;
 	font-size: 20px;
 }
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 }
 
 /************
@@ -441,6 +444,7 @@ input#summit::hover{
 	{
 		font-size: 24px;
 	}
+<<<<<<< HEAD
 	.loginbox{
 	width: 320px;
 	height: 420px;
@@ -513,6 +517,8 @@ input#submit {
 	margin: auto;
 	float: right;
 }
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 }
 
 /************

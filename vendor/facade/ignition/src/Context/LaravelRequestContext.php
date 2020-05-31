@@ -17,9 +17,19 @@ class LaravelRequestContext extends RequestContext
 
     public function getUser(): array
     {
+<<<<<<< HEAD
         $user = $this->request->user();
 
         if (! $user) {
+=======
+        try {
+            $user = $this->request->user();
+    
+            if (! $user) {
+                return [];
+            }
+        } catch (\Throwable $e) {
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             return [];
         }
 

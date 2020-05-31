@@ -33,12 +33,20 @@ class TraitPass implements Pass
         }
 
         $useStatements = array_map(function ($trait) {
+<<<<<<< HEAD
             return "use \\\\".ltrim($trait->getName(), "\\").";";
+=======
+            return "use \\\\" . ltrim($trait->getName(), "\\") . ";";
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         }, $traits);
 
         $code = preg_replace(
             '/^{$/m',
+<<<<<<< HEAD
             "{\n    ".implode("\n    ", $useStatements)."\n",
+=======
+            "{\n    " . implode("\n    ", $useStatements) . "\n",
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             $code
         );
 

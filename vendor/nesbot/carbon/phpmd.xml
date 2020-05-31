@@ -33,7 +33,11 @@
     </rule>
     <rule ref="rulesets/design.xml/CouplingBetweenObjects">
         <properties>
+<<<<<<< HEAD
             <property name="maximum" value="20" />
+=======
+            <property name="maximum" value="25" />
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         </properties>
     </rule>
     <rule ref="rulesets/naming.xml/ShortVariable">

@@ -103,7 +103,11 @@ class PendingCommand
      * Specify an expected choice question with expected answers that will be asked/shown when the command runs.
      *
      * @param  string  $question
+<<<<<<< HEAD
      * @param  string  $answer
+=======
+     * @param  string|array  $answer
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * @param  array  $answers
      * @param  bool  $strict
      * @return $this
@@ -163,10 +167,17 @@ class PendingCommand
     {
         $this->hasExecuted = true;
 
+<<<<<<< HEAD
         $this->mockConsoleOutput();
 
         try {
             $exitCode = $this->app->make(Kernel::class)->call($this->command, $this->parameters);
+=======
+        $mock = $this->mockConsoleOutput();
+
+        try {
+            $exitCode = $this->app->make(Kernel::class)->call($this->command, $this->parameters, $mock);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         } catch (NoMatchingExpectationException $e) {
             if ($e->getMethodName() === 'askQuestion') {
                 $this->test->fail('Unexpected question "'.$e->getActualArguments()[0]->getQuestion().'" was asked.');
@@ -218,7 +229,11 @@ class PendingCommand
     /**
      * Mock the application's console output.
      *
+<<<<<<< HEAD
      * @return void
+=======
+     * @return \Mockery\MockInterface
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      */
     protected function mockConsoleOutput()
     {
@@ -247,6 +262,11 @@ class PendingCommand
         $this->app->bind(OutputStyle::class, function () use ($mock) {
             return $mock;
         });
+<<<<<<< HEAD
+=======
+
+        return $mock;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     }
 
     /**

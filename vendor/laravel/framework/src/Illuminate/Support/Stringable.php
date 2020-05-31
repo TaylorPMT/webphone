@@ -195,6 +195,24 @@ class Stringable
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Split a string using a regular expression.
+     *
+     * @param  string  $pattern
+     * @param  int  $limit
+     * @param  int  $flags
+     * @return \Illuminate\Support\Collection
+     */
+    public function split($pattern, $limit = -1, $flags = 0)
+    {
+        $segments = preg_split($pattern, $this->value, $limit, $flags);
+
+        return ! empty($segments) ? collect($segments) : collect();
+    }
+
+    /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Cap a string with a single instance of a given value.
      *
      * @param  string  $cap

@@ -699,7 +699,18 @@ class UrlGenerator implements UrlGeneratorContract
 
         $this->cachedRoot = null;
         $this->cachedScheme = null;
+<<<<<<< HEAD
         $this->routeGenerator = null;
+=======
+
+        tap(optional($this->routeGenerator)->defaultParameters ?: [], function ($defaults) {
+            $this->routeGenerator = null;
+
+            if (! empty($defaults)) {
+                $this->defaults($defaults);
+            }
+        });
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     }
 
     /**

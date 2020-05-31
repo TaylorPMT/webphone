@@ -13,6 +13,10 @@ namespace Monolog\Handler;
 
 use InvalidArgumentException;
 use Monolog\Logger;
+<<<<<<< HEAD
+=======
+use Monolog\Utils;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
 /**
  * Stores logs to files that are rotated every day and a limited number of files are kept.
@@ -46,7 +50,11 @@ class RotatingFileHandler extends StreamHandler
      */
     public function __construct(string $filename, int $maxFiles = 0, $level = Logger::DEBUG, bool $bubble = true, ?int $filePermission = null, bool $useLocking = false)
     {
+<<<<<<< HEAD
         $this->filename = $filename;
+=======
+        $this->filename = Utils::canonicalizePath($filename);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         $this->maxFiles = $maxFiles;
         $this->nextRotation = new \DateTimeImmutable('tomorrow');
         $this->filenameFormat = '{filename}-{date}';

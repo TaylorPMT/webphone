@@ -886,7 +886,11 @@ class PostgresGrammar extends Grammar
      * @param  \Illuminate\Support\Fluent  $column
      * @return string
      */
+<<<<<<< HEAD
     private function formatPostGisType(string $type, Fluent $column)
+=======
+    private function formatPostGisType($type, Fluent $column)
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     {
         if ($column->isGeometry === null) {
             return sprintf('geography(%s, %s)', $type, $column->projection ?? '4326');

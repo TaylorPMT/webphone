@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use DB;
+<<<<<<< HEAD
 use app\db_topic;
 use app\db_post;
 use App\Models\db_user;
@@ -12,6 +13,10 @@ use Illuminate\Support\Carbon;
 use Auth;
 use Session;
 use Illuminate\Support\Facades\Hash;
+=======
+
+
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 class FrontendController extends Controller
 {
     public function getIndex(){
@@ -19,6 +24,7 @@ class FrontendController extends Controller
     	$menu=DB::table('db_menu')->get();
     	return view('frontend.master',compact('menu'));
     }
+<<<<<<< HEAD
     public function getNews(){
 
     	$menu_ngang = DB:: table('db_topic')->get();
@@ -128,4 +134,6 @@ class FrontendController extends Controller
         Request::session()->flush();
         return redirect()->route('trangchu');
     }
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 }

@@ -184,7 +184,14 @@ trait InteractsWithPivotTable
      */
     public function updateExistingPivot($id, array $attributes, $touch = true)
     {
+<<<<<<< HEAD
         if ($this->using && empty($this->pivotWheres) && empty($this->pivotWhereIns)) {
+=======
+        if ($this->using &&
+            empty($this->pivotWheres) &&
+            empty($this->pivotWhereIns) &&
+            empty($this->pivotWhereNulls)) {
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             return $this->updateExistingPivotUsingCustomClass($id, $attributes, $touch);
         }
 
@@ -409,7 +416,15 @@ trait InteractsWithPivotTable
      */
     public function detach($ids = null, $touch = true)
     {
+<<<<<<< HEAD
         if ($this->using && ! empty($ids) && empty($this->pivotWheres) && empty($this->pivotWhereIns)) {
+=======
+        if ($this->using &&
+            ! empty($ids) &&
+            empty($this->pivotWheres) &&
+            empty($this->pivotWhereIns) &&
+            empty($this->pivotWhereNulls)) {
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             $results = $this->detachUsingCustomClass($ids);
         } else {
             $query = $this->newPivotQuery();
@@ -541,6 +556,13 @@ trait InteractsWithPivotTable
             call_user_func_array([$query, 'whereIn'], $arguments);
         }
 
+<<<<<<< HEAD
+=======
+        foreach ($this->pivotWhereNulls as $arguments) {
+            call_user_func_array([$query, 'whereNull'], $arguments);
+        }
+
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         return $query->where($this->foreignPivotKey, $this->parent->{$this->parentKey});
     }
 

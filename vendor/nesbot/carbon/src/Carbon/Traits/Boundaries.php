@@ -10,7 +10,11 @@
  */
 namespace Carbon\Traits;
 
+<<<<<<< HEAD
 use InvalidArgumentException;
+=======
+use Carbon\Exceptions\UnknownUnitException;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
 /**
  * Trait Boundaries.
@@ -272,12 +276,16 @@ trait Boundaries
      */
     public function startOfWeek($weekStartsAt = null)
     {
+<<<<<<< HEAD
         $date = $this;
         while ($date->dayOfWeek !== ($weekStartsAt ?? $this->firstWeekDay)) {
             $date = $date->subDay();
         }
 
         return $date->startOfDay();
+=======
+        return $this->subDays((7 + $this->dayOfWeek - ($weekStartsAt ?? $this->firstWeekDay)) % 7)->startOfDay();
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     }
 
     /**
@@ -296,12 +304,16 @@ trait Boundaries
      */
     public function endOfWeek($weekEndsAt = null)
     {
+<<<<<<< HEAD
         $date = $this;
         while ($date->dayOfWeek !== ($weekEndsAt ?? $this->lastWeekDay)) {
             $date = $date->addDay();
         }
 
         return $date->endOfDay();
+=======
+        return $this->addDays((7 - $this->dayOfWeek + ($weekEndsAt ?? $this->lastWeekDay)) % 7)->endOfDay();
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     }
 
     /**
@@ -418,7 +430,11 @@ trait Boundaries
         $ucfUnit = ucfirst(static::singularUnit($unit));
         $method = "startOf$ucfUnit";
         if (!method_exists($this, $method)) {
+<<<<<<< HEAD
             throw new InvalidArgumentException("Unknown unit '$unit'");
+=======
+            throw new UnknownUnitException($unit);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         }
 
         return $this->$method(...$params);
@@ -444,7 +460,11 @@ trait Boundaries
         $ucfUnit = ucfirst(static::singularUnit($unit));
         $method = "endOf$ucfUnit";
         if (!method_exists($this, $method)) {
+<<<<<<< HEAD
             throw new InvalidArgumentException("Unknown unit '$unit'");
+=======
+            throw new UnknownUnitException($unit);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         }
 
         return $this->$method(...$params);

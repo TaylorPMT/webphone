@@ -984,6 +984,21 @@ class Builder
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Add an "or where in raw" clause for integer values to the query.
+     *
+     * @param  string  $column
+     * @param  \Illuminate\Contracts\Support\Arrayable|array  $values
+     * @return $this
+     */
+    public function orWhereIntegerInRaw($column, $values)
+    {
+        return $this->whereIntegerInRaw($column, $values, 'or');
+    }
+
+    /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Add a "where not in raw" clause for integer values to the query.
      *
      * @param  string  $column
@@ -997,6 +1012,21 @@ class Builder
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Add an "or where not in raw" clause for integer values to the query.
+     *
+     * @param  string  $column
+     * @param  \Illuminate\Contracts\Support\Arrayable|array  $values
+     * @return $this
+     */
+    public function orWhereIntegerNotInRaw($column, $values)
+    {
+        return $this->whereIntegerNotInRaw($column, $values, 'or');
+    }
+
+    /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Add a "where null" clause to the query.
      *
      * @param  string|array  $columns

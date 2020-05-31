@@ -36,7 +36,11 @@ class PHPUnitConstraint extends MatcherAbstract
         if (!($constraint instanceof \PHPUnit_Framework_Constraint)
         && !($constraint instanceof \PHPUnit\Framework\Constraint)) {
             throw new InvalidArgumentException(
+<<<<<<< HEAD
                 'Constraint must be one of \PHPUnit\Framework\Constraint or '.
+=======
+                'Constraint must be one of \PHPUnit\Framework\Constraint or ' .
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
                 '\PHPUnit_Framework_Constraint'
             );
         }

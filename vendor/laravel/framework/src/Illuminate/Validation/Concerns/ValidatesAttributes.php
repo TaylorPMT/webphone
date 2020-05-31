@@ -654,6 +654,11 @@ trait ValidatesAttributes
                     return new SpoofCheckValidation();
                 } elseif ($validation === 'filter') {
                     return new FilterEmailValidation();
+<<<<<<< HEAD
+=======
+                } elseif ($validation === 'filter_unicode') {
+                    return FilterEmailValidation::unicode();
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
                 }
             })
             ->values()

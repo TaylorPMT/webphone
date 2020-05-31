@@ -74,7 +74,12 @@
     },
     "extra": {
         "branch-alias": {
+<<<<<<< HEAD
             "dev-master": "2.x-dev"
+=======
+            "dev-master": "2.x-dev",
+            "dev-3.x": "3.x-dev"
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         },
         "laravel": {
             "providers": [

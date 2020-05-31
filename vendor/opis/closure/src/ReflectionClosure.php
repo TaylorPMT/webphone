@@ -107,6 +107,11 @@ class ReflectionClosure extends ReflectionFunction
             $fn = PHP_MINOR_VERSION === 4;
         }
 
+<<<<<<< HEAD
+=======
+        $class_keywords = ['self', 'static', 'parent'];
+
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         $ns = $this->getNamespaceName();
         $nsf = $ns == '' ? '' : ($ns[0] == '\\' ? $ns : '\\' . $ns);
 
@@ -207,11 +212,14 @@ class ReflectionClosure extends ReflectionFunction
                                 $state = 'closure';
                             }
                             break;
+<<<<<<< HEAD
                         case '=':
                             $code .= $token;
                             $lastState = 'closure_args';
                             $state = 'ignore_next';
                             break;
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
                         case ':':
                             $code .= ':';
                             $state = 'return';
@@ -331,6 +339,7 @@ class ReflectionClosure extends ReflectionFunction
                             $code .= $_namespace;
                             break;
                         case T_CLASS_C:
+<<<<<<< HEAD
                             $code .= $_class;
                             break;
                         case T_FUNC_C:
@@ -338,6 +347,15 @@ class ReflectionClosure extends ReflectionFunction
                             break;
                         case T_METHOD_C:
                             $code .= $_method;
+=======
+                            $code .= $inside_anonymous ? $token[1] : $_class;
+                            break;
+                        case T_FUNC_C:
+                            $code .= $inside_anonymous ? $token[1] : $_function;
+                            break;
+                        case T_METHOD_C:
+                            $code .= $inside_anonymous ? $token[1] : $_method;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
                             break;
                         case T_COMMENT:
                             if (substr($token[1], 0, 8) === '#trackme') {
@@ -359,7 +377,13 @@ class ReflectionClosure extends ReflectionFunction
                             $code .= $token[1];
                             break;
                         case T_STATIC:
+<<<<<<< HEAD
                             $isUsingScope = true;
+=======
+                            if (!$inside_anonymous) {
+                                $isUsingScope = true;
+                            }
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
                             $code .= $token[1];
                             break;
                         case T_NS_SEPARATOR:
@@ -384,6 +408,10 @@ class ReflectionClosure extends ReflectionFunction
                             $lastState = 'closure';
                             break;
                         case T_INSTANCEOF:
+<<<<<<< HEAD
+=======
+                        case T_INSTEADOF:
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
                             $code .= $token[1];
                             $context = 'instanceof';
                             $state = 'id_start';
@@ -501,7 +529,11 @@ class ReflectionClosure extends ReflectionFunction
                                 $open++;
                             }
                             if($context === 'new' || false !== strpos($id_name, '\\')){
+<<<<<<< HEAD
                                 if($id_start !== '\\'){
+=======
+                                if($id_start !== '\\' && !in_array($id_start_ci, $class_keywords)){
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
                                     if ($classes === null) {
                                         $classes = $this->getClasses();
                                     }
@@ -529,7 +561,13 @@ class ReflectionClosure extends ReflectionFunction
                         case T_DOUBLE_COLON:
                             if($id_start !== '\\') {
                                 if($id_start_ci === 'self' || $id_start_ci === 'static' || $id_start_ci === 'parent'){
+<<<<<<< HEAD
                                     $isUsingScope = true;
+=======
+                                    if (!$inside_anonymous) {
+                                        $isUsingScope = true;
+                                    }
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
                                 } elseif (!($php7 && in_array($id_start_ci, $php7_types))){
                                     if ($classes === null) {
                                         $classes = $this->getClasses();
@@ -546,6 +584,7 @@ class ReflectionClosure extends ReflectionFunction
                             $state = $token[0] === T_DOUBLE_COLON ? 'ignore_next' : $lastState;
                             break;
                         default:
+<<<<<<< HEAD
                             if($id_start !== '\\'){
                                 if($context === 'use' ||
                                     $context === 'instanceof' ||
@@ -555,6 +594,25 @@ class ReflectionClosure extends ReflectionFunction
                                 ){
                                     if($id_start_ci === 'self' || $id_start_ci === 'static' || $id_start_ci === 'parent'){
                                         $isUsingScope = true;
+=======
+                            if($id_start !== '\\' && !defined($id_start)){
+                                if($constants === null){
+                                    $constants = $this->getConstants();
+                                }
+                                if(isset($constants[$id_start])){
+                                    $id_start = $constants[$id_start];
+                                } elseif($context === 'use' ||
+                                    $context === 'instanceof' ||
+                                    $context === 'args' ||
+                                    $context === 'return_type' ||
+                                    $context === 'extends' ||
+                                    $context === 'root'
+                                ){
+                                    if($id_start_ci === 'self' || $id_start_ci === 'static' || $id_start_ci === 'parent'){
+                                        if (!$inside_anonymous) {
+                                            $isUsingScope = true;
+                                        }
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
                                     } elseif (!($php7 && in_array($id_start_ci, $php7_types))){
                                         if($classes === null){
                                             $classes = $this->getClasses();
@@ -566,6 +624,7 @@ class ReflectionClosure extends ReflectionFunction
                                             $id_start = $nsf . '\\' . $id_start;
                                         }
                                     }
+<<<<<<< HEAD
                                 } else {
                                     if($constants === null){
                                         $constants = $this->getConstants();
@@ -573,6 +632,8 @@ class ReflectionClosure extends ReflectionFunction
                                     if(isset($constants[$id_start])){
                                         $id_start = $constants[$id_start];
                                     }
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
                                 }
                             }
                             $code .= $id_start . $id_name;
@@ -607,7 +668,10 @@ class ReflectionClosure extends ReflectionFunction
         }
 
         if ($isShortClosure) {
+<<<<<<< HEAD
             $code .= ';';
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             $this->useVariables = $this->getStaticVariables();
         } else {
             $this->useVariables = empty($use) ? $use : array_intersect_key($this->getStaticVariables(), array_flip($use));

@@ -2,6 +2,10 @@
 
 namespace Illuminate\Routing;
 
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Arr;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 use Illuminate\Support\Traits\Macroable;
 
 class PendingResourceRegistration
@@ -154,6 +158,24 @@ class PendingResourceRegistration
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Specify middleware that should be removed from the resource routes.
+     *
+     * @param  array|string  $middleware
+     * @return $this|array
+     */
+    public function withoutMiddleware($middleware)
+    {
+        $this->options['excluded_middleware'] = array_merge(
+            (array) ($this->options['excluded_middleware'] ?? []), Arr::wrap($middleware)
+        );
+
+        return $this;
+    }
+
+    /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Indicate that the resource routes should have "shallow" nesting.
      *
      * @param  bool  $shallow

@@ -292,6 +292,23 @@ abstract class AbstractPaginator implements Htmlable
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Load a set of relationship counts onto the mixed relationship collection.
+     *
+     * @param  string  $relation
+     * @param  array  $relations
+     * @return $this
+     */
+    public function loadMorphCount($relation, $relations)
+    {
+        $this->getCollection()->loadMorphCount($relation, $relations);
+
+        return $this;
+    }
+
+    /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Get the slice of items being paginated.
      *
      * @return array
@@ -539,6 +556,20 @@ abstract class AbstractPaginator implements Htmlable
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Indicate that Tailwind styling should be used for generated links.
+     *
+     * @return void
+     */
+    public static function useTailwind()
+    {
+        static::defaultView('pagination::tailwind');
+        static::defaultSimpleView('pagination::simple-tailwind');
+    }
+
+    /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Indicate that Bootstrap 3 styling should be used for generated links.
      *
      * @return void

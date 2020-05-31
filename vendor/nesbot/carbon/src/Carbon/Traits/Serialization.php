@@ -10,7 +10,11 @@
  */
 namespace Carbon\Traits;
 
+<<<<<<< HEAD
 use InvalidArgumentException;
+=======
+use Carbon\Exceptions\InvalidFormatException;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
 /**
  * Trait Serialization.
@@ -69,7 +73,11 @@ trait Serialization
      *
      * @param string $value
      *
+<<<<<<< HEAD
      * @throws \InvalidArgumentException
+=======
+     * @throws InvalidFormatException
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      *
      * @return static
      */
@@ -78,7 +86,11 @@ trait Serialization
         $instance = @unserialize("$value");
 
         if (!$instance instanceof static) {
+<<<<<<< HEAD
             throw new InvalidArgumentException('Invalid serialized value.');
+=======
+            throw new InvalidFormatException("Invalid serialized value: $value");
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         }
 
         return $instance;

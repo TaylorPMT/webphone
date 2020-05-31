@@ -196,6 +196,10 @@ class ChangeColumn
         return in_array($type, [
             'bigInteger',
             'binary',
+<<<<<<< HEAD
+=======
+            'boolean',
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             'date',
             'decimal',
             'double',
