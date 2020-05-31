@@ -59,6 +59,26 @@ class Parameter
             return 'array';
         }
 
+<<<<<<< HEAD
+        /*
+         * PHP < 5.4.1 has some strange behaviour with a typehint of self and
+         * subclass signatures, so we risk the regexp instead
+         */
+        if ((version_compare(PHP_VERSION, '5.4.1') >= 0)) {
+            try {
+                if ($this->rfp->getClass()) {
+                    return $this->rfp->getClass()->getName();
+                }
+            } catch (\ReflectionException $re) {
+                // noop
+            }
+        }
+
+        if (version_compare(PHP_VERSION, '7.0.0-dev') >= 0 && $this->rfp->hasType()) {
+            return PHP_VERSION_ID >= 70100 ? $this->rfp->getType()->getName() : (string) $this->rfp->getType();
+        }
+
+=======
         try {
             if ($this->rfp->getClass()) {
                 return $this->rfp->getClass()->getName();
@@ -72,6 +92,7 @@ class Parameter
         }
 
         // can we even get here now?
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         if (preg_match('/^Parameter #[0-9]+ \[ \<(required|optional)\> (?<typehint>\S+ )?.*\$' . $this->rfp->getName() . ' .*\]$/', $this->rfp->__toString(), $typehintMatch)) {
             if (!empty($typehintMatch['typehint'])) {
                 return $typehintMatch['typehint'];

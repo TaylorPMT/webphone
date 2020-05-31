@@ -7,6 +7,19 @@ use Illuminate\Notifications\ChannelManager;
 use Illuminate\Support\Testing\Fakes\NotificationFake;
 
 /**
+<<<<<<< HEAD
+ * @method static void send(\Illuminate\Support\Collection|array|mixed $notifiables, $notification)
+ * @method static void sendNow(\Illuminate\Support\Collection|array|mixed $notifiables, $notification)
+ * @method static mixed channel(string|null $name = null)
+ * @method static \Illuminate\Notifications\ChannelManager locale(string|null $locale)
+ * @method static void assertSentTo(mixed $notifiable, string $notification, callable $callback = null)
+ * @method static void assertSentToTimes(mixed $notifiable, string $notification, int $times = 1)
+ * @method static void assertNotSentTo(mixed $notifiable, string $notification, callable $callback = null)
+ * @method static void assertNothingSent()
+ * @method static void assertTimesSent(int $expectedCount, string $notification)
+ * @method static \Illuminate\Support\Collection sent(mixed $notifiable, string $notification, callable $callback = null)
+ * @method static bool hasSent(mixed $notifiable, string $notification)
+=======
  * @method static \Illuminate\Notifications\ChannelManager locale(string|null $locale)
  * @method static \Illuminate\Support\Collection sent(mixed $notifiable, string $notification, callable $callback = null)
  * @method static bool hasSent(mixed $notifiable, string $notification)
@@ -18,6 +31,7 @@ use Illuminate\Support\Testing\Fakes\NotificationFake;
  * @method static void assertTimesSent(int $expectedCount, string $notification)
  * @method static void send(\Illuminate\Support\Collection|array|mixed $notifiables, $notification)
  * @method static void sendNow(\Illuminate\Support\Collection|array|mixed $notifiables, $notification)
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
  *
  * @see \Illuminate\Notifications\ChannelManager
  */

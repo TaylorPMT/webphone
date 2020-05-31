@@ -161,7 +161,10 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+<<<<<<< HEAD
+=======
         
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
         /*
          * Package Service Providers...
@@ -175,11 +178,14 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+<<<<<<< HEAD
+=======
        /*
             * package password auth api 
             *
        */
         Laravel\Passport\PassportServiceProvider::class,
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
     ],
 
@@ -232,7 +238,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+<<<<<<< HEAD
+=======
       
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
     ],
 

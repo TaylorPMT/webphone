@@ -3,7 +3,10 @@ namespace GuzzleHttp;
 
 use GuzzleHttp\Exception\InvalidArgumentException;
 use Psr\Http\Message\UriInterface;
+<<<<<<< HEAD
+=======
 use Symfony\Polyfill\Intl\Idn\Idn;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
 final class Utils
 {
@@ -31,7 +34,14 @@ final class Utils
     public static function idnUriConvert(UriInterface $uri, $options = 0)
     {
         if ($uri->getHost()) {
+<<<<<<< HEAD
+            $idnaVariant = defined('INTL_IDNA_VARIANT_UTS46') ? INTL_IDNA_VARIANT_UTS46 : 0;
+            $asciiHost = $idnaVariant === 0
+                ? idn_to_ascii($uri->getHost(), $options)
+                : idn_to_ascii($uri->getHost(), $options, $idnaVariant, $info);
+=======
             $asciiHost = self::idnToAsci($uri->getHost(), $options, $info);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             if ($asciiHost === false) {
                 $errorBitSet = isset($info['errors']) ? $info['errors'] : 0;
 
@@ -62,6 +72,8 @@ final class Utils
 
         return $uri;
     }
+<<<<<<< HEAD
+=======
 
     /**
      * @param string $domain
@@ -86,4 +98,5 @@ final class Utils
          */
         return Idn::idn_to_ascii($domain, $options, Idn::INTL_IDNA_VARIANT_UTS46, $info);
     }
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 }

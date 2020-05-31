@@ -13,7 +13,11 @@ namespace Monolog;
 
 final class Utils
 {
+<<<<<<< HEAD
+    const DEFAULT_JSON_FLAGS = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRESERVE_ZERO_FRACTION;
+=======
     const DEFAULT_JSON_FLAGS = JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRESERVE_ZERO_FRACTION | JSON_INVALID_UTF8_SUBSTITUTE;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
     /**
      * @internal
@@ -35,6 +39,15 @@ final class Utils
     }
 
     /**
+<<<<<<< HEAD
+     * Return the JSON representation of a value
+     *
+     * @param  mixed             $data
+     * @param  int               $encodeFlags flags to pass to json encode, defaults to JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE
+     * @param  bool              $ignoreErrors whether to ignore encoding errors or to throw on error, when ignored and the encoding fails, "null" is returned which is valid json for null
+     * @throws \RuntimeException if encoding fails and errors are not ignored
+     * @return string when errors are ignored and the encoding fails, "null" is returned which is valid json for null
+=======
      * Makes sure if a relative path is passed in it is turned into an absolute path
      *
      * @param string $streamUrl stream URL or path without protocol
@@ -70,6 +83,7 @@ final class Utils
      * @param  bool              $ignoreErrors whether to ignore encoding errors or to throw on error, when ignored and the encoding fails, "null" is returned which is valid json for null
      * @throws \RuntimeException if encoding fails and errors are not ignored
      * @return string            when errors are ignored and the encoding fails, "null" is returned which is valid json for null
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      */
     public static function jsonEncode($data, ?int $encodeFlags = null, bool $ignoreErrors = false): string
     {
@@ -99,11 +113,19 @@ final class Utils
      *
      * If the failure is due to invalid string encoding, try to clean the
      * input and encode again. If the second encoding attempt fails, the
+<<<<<<< HEAD
+     * inital error is not encoding related or the input can't be cleaned then
+     * raise a descriptive exception.
+     *
+     * @param  int               $code return code of json_last_error function
+     * @param  mixed             $data data that was meant to be encoded
+=======
      * initial error is not encoding related or the input can't be cleaned then
      * raise a descriptive exception.
      *
      * @param  int               $code        return code of json_last_error function
      * @param  mixed             $data        data that was meant to be encoded
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * @param  int               $encodeFlags flags to pass to json encode, defaults to JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRESERVE_ZERO_FRACTION
      * @throws \RuntimeException if failure can't be corrected
      * @return string            JSON encoded data after error correction

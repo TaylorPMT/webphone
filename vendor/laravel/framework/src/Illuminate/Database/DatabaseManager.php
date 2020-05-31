@@ -246,6 +246,8 @@ class DatabaseManager implements ConnectionResolverInterface
     }
 
     /**
+<<<<<<< HEAD
+=======
      * Set the default database connection for the callback execution.
      *
      * @param  string  $name
@@ -264,6 +266,7 @@ class DatabaseManager implements ConnectionResolverInterface
     }
 
     /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Refresh the PDO connections on a given connection.
      *
      * @param  string  $name

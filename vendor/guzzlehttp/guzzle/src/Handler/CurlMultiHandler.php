@@ -1,6 +1,10 @@
 <?php
 namespace GuzzleHttp\Handler;
 
+<<<<<<< HEAD
+use GuzzleHttp\Exception\InvalidArgumentException;
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 use GuzzleHttp\Promise as P;
 use GuzzleHttp\Promise\Promise;
 use GuzzleHttp\Utils;

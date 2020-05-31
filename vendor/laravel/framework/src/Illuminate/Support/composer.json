@@ -17,7 +17,11 @@
         "php": "^7.2.5",
         "ext-json": "*",
         "ext-mbstring": "*",
+<<<<<<< HEAD
+        "doctrine/inflector": "^1.1",
+=======
         "doctrine/inflector": "^1.4|^2.0",
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         "illuminate/contracts": "^7.0",
         "nesbot/carbon": "^2.17",
         "voku/portable-ascii": "^1.4.8"

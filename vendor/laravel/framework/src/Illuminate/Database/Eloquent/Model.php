@@ -10,7 +10,10 @@ use Illuminate\Contracts\Routing\UrlRoutable;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Database\ConnectionResolverInterface as Resolver;
+<<<<<<< HEAD
+=======
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 use Illuminate\Database\Eloquent\Relations\Concerns\AsPivot;
 use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Database\Eloquent\Relations\Pivot;
@@ -521,6 +524,8 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     }
 
     /**
+<<<<<<< HEAD
+=======
      * Eager load relationships on the polymorphic relation of a model.
      *
      * @param  string  $relation
@@ -537,6 +542,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     }
 
     /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Eager load relations on the model if they are not already eager loaded.
      *
      * @param  array|string  $relations
@@ -567,6 +573,8 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     }
 
     /**
+<<<<<<< HEAD
+=======
      * Eager load relationship counts on the polymorphic relation of a model.
      *
      * @param  string  $relation
@@ -583,6 +591,7 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     }
 
     /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Increment a column's value by a given amount.
      *
      * @param  string  $column
@@ -1581,8 +1590,12 @@ abstract class Model implements Arrayable, ArrayAccess, Jsonable, JsonSerializab
     {
         $relationship = $this->{Str::plural(Str::camel($childType))}();
 
+<<<<<<< HEAD
+        if ($relationship instanceof HasManyThrough) {
+=======
         if ($relationship instanceof HasManyThrough ||
             $relationship instanceof BelongsToMany) {
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             return $relationship->where($relationship->getRelated()->getTable().'.'.$field, $value)->first();
         } else {
             return $relationship->where($field, $value)->first();

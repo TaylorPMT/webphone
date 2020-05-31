@@ -42,7 +42,11 @@ use Closure;
  *                                                                                                                                                                                               values for $minute and $second will be their now() values.
  *                                                                                                                                                                                               If $hour is not null then the default values for $minute and $second
  *                                                                                                                                                                                               will be 0.
+<<<<<<< HEAD
+ *                                                                                                                                                                                               If one of the set values is not valid, an \InvalidArgumentException
+=======
  *                                                                                                                                                                                               If one of the set values is not valid, an InvalidDateException
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
  *                                                                                                                                                                                               will be thrown.
  * @method CarbonImmutable                                    disableHumanDiffOption($humanDiffOption)                                                                                           @deprecated To avoid conflict between different third-party libraries, static setters should not be used.
  *                                                                                                                                                                                                           You should rather use the ->settings() method.

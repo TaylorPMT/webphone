@@ -8,7 +8,13 @@ namespace Carbon\Doctrine;
 
 use Doctrine\DBAL\Types\VarDateTimeType;
 
+<<<<<<< HEAD
+class DateTimeType extends VarDateTimeType
+{
+    use CarbonType;
+=======
 class DateTimeType extends VarDateTimeType implements CarbonDoctrineType
 {
     use CarbonTypeConverter;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 }

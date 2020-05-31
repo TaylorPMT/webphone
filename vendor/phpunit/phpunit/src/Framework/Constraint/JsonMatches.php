@@ -74,8 +74,11 @@ final class JsonMatches extends Constraint
      * @throws ExpectationFailedException
      * @throws \PHPUnit\Framework\Exception
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+<<<<<<< HEAD
+=======
      *
      * @psalm-return never-return
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      */
     protected function fail($other, $description, ComparisonFailure $comparisonFailure = null): void
     {

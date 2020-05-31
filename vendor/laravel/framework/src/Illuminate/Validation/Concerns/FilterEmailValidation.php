@@ -8,6 +8,8 @@ use Egulias\EmailValidator\Validation\EmailValidation;
 class FilterEmailValidation implements EmailValidation
 {
     /**
+<<<<<<< HEAD
+=======
      * The flags to pass to the filter_var function.
      *
      * @var int|null
@@ -36,6 +38,7 @@ class FilterEmailValidation implements EmailValidation
     }
 
     /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Returns true if the given email is valid.
      *
      * @param  string  $email
@@ -44,9 +47,13 @@ class FilterEmailValidation implements EmailValidation
      */
     public function isValid($email, EmailLexer $emailLexer)
     {
+<<<<<<< HEAD
+        return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
+=======
         return is_null($this->flags)
                     ? filter_var($email, FILTER_VALIDATE_EMAIL) !== false
                     : filter_var($email, FILTER_VALIDATE_EMAIL, $this->flags) !== false;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     }
 
     /**

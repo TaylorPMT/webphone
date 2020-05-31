@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+/.docker    export-ignore
+/build      export-ignore
+/tools      export-ignore
+/tools/*    binary
+
+*.php diff=php
+
+=======
 /.docker        export-ignore
 /.editorconfig  export-ignore
 /.github        export-ignore
@@ -12,3 +21,4 @@
 /tools/*        binary
 
 *.php diff=php
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a

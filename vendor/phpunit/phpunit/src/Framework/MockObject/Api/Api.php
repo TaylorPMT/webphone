@@ -23,12 +23,20 @@ trait Api
     private static $__phpunit_configurableMethods;
 
     /**
+<<<<<<< HEAD
+     * @var @object
+=======
      * @var object
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      */
     private $__phpunit_originalObject;
 
     /**
+<<<<<<< HEAD
+     * @var @bool
+=======
      * @var bool
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      */
     private $__phpunit_returnValueGeneration = true;
 

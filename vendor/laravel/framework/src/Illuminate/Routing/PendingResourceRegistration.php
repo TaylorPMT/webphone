@@ -2,7 +2,10 @@
 
 namespace Illuminate\Routing;
 
+<<<<<<< HEAD
+=======
 use Illuminate\Support\Arr;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 use Illuminate\Support\Traits\Macroable;
 
 class PendingResourceRegistration
@@ -155,6 +158,8 @@ class PendingResourceRegistration
     }
 
     /**
+<<<<<<< HEAD
+=======
      * Specify middleware that should be removed from the resource routes.
      *
      * @param  array|string  $middleware
@@ -170,6 +175,7 @@ class PendingResourceRegistration
     }
 
     /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Indicate that the resource routes should have "shallow" nesting.
      *
      * @param  bool  $shallow

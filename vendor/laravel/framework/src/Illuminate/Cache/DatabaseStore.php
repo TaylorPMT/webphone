@@ -7,7 +7,10 @@ use Exception;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\PostgresConnection;
+<<<<<<< HEAD
+=======
 use Illuminate\Database\QueryException;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 use Illuminate\Support\InteractsWithTime;
 use Illuminate\Support\Str;
 
@@ -117,7 +120,13 @@ class DatabaseStore implements Store
     public function put($key, $value, $seconds)
     {
         $key = $this->prefix.$key;
+<<<<<<< HEAD
+
         $value = $this->serialize($value);
+
+=======
+        $value = $this->serialize($value);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         $expiration = $this->getTime() + $seconds;
 
         try {
@@ -130,6 +139,8 @@ class DatabaseStore implements Store
     }
 
     /**
+<<<<<<< HEAD
+=======
      * Store an item in the cache if the key doesn't exist.
      *
      * @param  string  $key
@@ -159,6 +170,7 @@ class DatabaseStore implements Store
     }
 
     /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Increment the value of an item in the cache.
      *
      * @param  string  $key

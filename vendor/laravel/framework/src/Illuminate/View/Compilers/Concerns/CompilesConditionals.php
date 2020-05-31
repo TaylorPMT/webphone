@@ -48,6 +48,8 @@ trait CompilesConditionals
     }
 
     /**
+<<<<<<< HEAD
+=======
      * Compile the env statements into valid PHP.
      *
      * @param  string  $environment
@@ -89,6 +91,7 @@ trait CompilesConditionals
     }
 
     /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Compile the if-guest statements into valid PHP.
      *
      * @param  string|null  $guard

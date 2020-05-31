@@ -11,7 +11,13 @@
 namespace Carbon\Traits;
 
 use Carbon\CarbonInterface;
+<<<<<<< HEAD
+use Carbon\CarbonInterval;
+use DateInterval;
+use InvalidArgumentException;
+=======
 use Carbon\Exceptions\UnknownUnitException;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
 /**
  * Trait Rounding.
@@ -25,8 +31,11 @@ use Carbon\Exceptions\UnknownUnitException;
  */
 trait Rounding
 {
+<<<<<<< HEAD
+=======
     use IntervalRounding;
 
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     /**
      * Round the current instance at the given unit with given precision if specified and the given function.
      *
@@ -69,7 +78,11 @@ trait Rounding
         $precision *= $factor;
 
         if (!isset($ranges[$normalizedUnit])) {
+<<<<<<< HEAD
+            throw new InvalidArgumentException("Unknown unit '$unit' to floor");
+=======
             throw new UnknownUnitException($unit);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         }
 
         $found = false;
@@ -150,7 +163,26 @@ trait Rounding
      */
     public function round($precision = 1, $function = 'round')
     {
+<<<<<<< HEAD
+        $unit = 'second';
+
+        if ($precision instanceof DateInterval) {
+            $precision = (string) CarbonInterval::instance($precision);
+        }
+
+        if (is_string($precision) && preg_match('/^\s*(?<precision>\d+)?\s*(?<unit>\w+)(?<other>\W.*)?$/', $precision, $match)) {
+            if (trim($match['other'] ?? '') !== '') {
+                throw new InvalidArgumentException('Rounding is only possible with single unit intervals.');
+            }
+
+            $precision = (int) ($match['precision'] ?: 1);
+            $unit = $match['unit'];
+        }
+
+        return $this->roundUnit($unit, $precision, $function);
+=======
         return $this->roundWith($precision, $function);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     }
 
     /**

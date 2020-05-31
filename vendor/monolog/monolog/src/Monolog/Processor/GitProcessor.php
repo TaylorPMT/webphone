@@ -51,7 +51,11 @@ class GitProcessor implements ProcessorInterface
         }
 
         $branches = `git branch -v --no-abbrev`;
+<<<<<<< HEAD
+        if (preg_match('{^\* (.+?)\s+([a-f0-9]{40})(?:\s|$)}m', $branches, $matches)) {
+=======
         if ($branches && preg_match('{^\* (.+?)\s+([a-f0-9]{40})(?:\s|$)}m', $branches, $matches)) {
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             return self::$cache = [
                 'branch' => $matches[1],
                 'commit' => $matches[2],

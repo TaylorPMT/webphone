@@ -2,8 +2,11 @@
 
 namespace Illuminate\Mail\Events;
 
+<<<<<<< HEAD
+=======
 use Swift_Attachment;
 
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 class MessageSent
 {
     /**
@@ -32,6 +35,8 @@ class MessageSent
         $this->data = $data;
         $this->message = $message;
     }
+<<<<<<< HEAD
+=======
 
     /**
      * Get the serializable representation of the object.
@@ -71,4 +76,5 @@ class MessageSent
             $this->data = $data['data'];
         }
     }
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 }

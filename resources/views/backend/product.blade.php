@@ -1,6 +1,10 @@
 @extends('backend.template')
 @section('title','Quản Lý Sản Phẩm')
+<<<<<<< HEAD
+
+=======
 <meta name="csrf-token" content="{{ csrf_token() }}">
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 @section('content')
 
   <h2>Quản Lý Sản Phẩm</h2>
@@ -19,7 +23,11 @@
       </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
+        @foreach($product as $product)
+=======
         {{-- @foreach($product as $product)
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         <tr>
           <td>{{$product->id}}</td>
           <td>{{$product->name}}</td>
@@ -28,7 +36,11 @@
           <td>{{$product->pricesale == 0 ? "Không có khuyến mãi":$product->pricesale}}</td>
           <td>{{$product->created_at}}</td>
           <td>
+<<<<<<< HEAD
+          @php
+=======
         @php
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
               if($product->status !=1)
               {
                 echo "<span class='text-danger'>Off</span>";
@@ -56,6 +68,15 @@
               </a>
           </td>
         </tr>
+<<<<<<< HEAD
+        @endforeach
+    </tbody>
+  </table>
+  <script>
+    $(document).ready( function () {
+      $('#myTable').DataTable();
+  } );
+=======
         @endforeach --}}
         
     </tbody>
@@ -122,6 +143,7 @@
           });
           
         })
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
   </script>
   @endsection
   

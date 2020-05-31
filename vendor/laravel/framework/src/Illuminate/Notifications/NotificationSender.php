@@ -190,6 +190,12 @@ class NotificationSender
                     $notification->locale = $this->locale;
                 }
 
+<<<<<<< HEAD
+                $this->bus->dispatch(
+                    (new SendQueuedNotifications($notifiable, $notification, [$channel]))
+                            ->onConnection($notification->connection)
+                            ->onQueue($notification->queue)
+=======
                 $queue = $notification->queue;
 
                 if (method_exists($notification, 'viaQueues')) {
@@ -200,6 +206,7 @@ class NotificationSender
                     (new SendQueuedNotifications($notifiable, $notification, [$channel]))
                             ->onConnection($notification->connection)
                             ->onQueue($queue)
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
                             ->delay($notification->delay)
                             ->through(
                                 array_merge(

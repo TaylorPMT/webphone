@@ -202,12 +202,17 @@ class NormalizerFormatter implements FormatterInterface
                 $data['faultactor'] = $e->faultactor;
             }
 
+<<<<<<< HEAD
+            if (isset($e->detail) && (is_string($e->detail) || is_object($e->detail) || is_array($e->detail))) {
+                $data['detail'] = is_string($e->detail) ? $e->detail : reset($e->detail);
+=======
             if (isset($e->detail)) {
                 if (is_string($e->detail)) {
                     $data['detail'] = $e->detail;
                 } elseif (is_object($e->detail) || is_array($e->detail)) {
                     $data['detail'] = $this->toJson($e->detail, true);
                 }
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             }
         }
 
@@ -230,7 +235,11 @@ class NormalizerFormatter implements FormatterInterface
      *
      * @param  mixed             $data
      * @throws \RuntimeException if encoding fails and errors are not ignored
+<<<<<<< HEAD
+     * @return string if encoding fails and ignoreErrors is true 'null' is returned
+=======
      * @return string            if encoding fails and ignoreErrors is true 'null' is returned
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      */
     protected function toJson($data, bool $ignoreErrors = false): string
     {
@@ -248,12 +257,20 @@ class NormalizerFormatter implements FormatterInterface
         return $date->format($this->dateFormat);
     }
 
+<<<<<<< HEAD
+    protected function addJsonEncodeOption($option)
+=======
     public function addJsonEncodeOption($option)
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     {
         $this->jsonEncodeOptions |= $option;
     }
 
+<<<<<<< HEAD
+    protected function removeJsonEncodeOption($option)
+=======
     public function removeJsonEncodeOption($option)
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     {
         $this->jsonEncodeOptions ^= $option;
     }

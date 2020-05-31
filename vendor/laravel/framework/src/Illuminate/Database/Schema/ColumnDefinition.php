@@ -18,7 +18,10 @@ use Illuminate\Support\Fluent;
  * @method ColumnDefinition generatedAs(string|Expression $expression = null) Create a SQL compliant identity column (PostgreSQL)
  * @method ColumnDefinition index(string $indexName = null) Add an index
  * @method ColumnDefinition nullable(bool $value = true) Allow NULL values to be inserted into the column
+<<<<<<< HEAD
+=======
  * @method ColumnDefinition persisted() Mark the computed generated column as persistent (SQL Server)
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
  * @method ColumnDefinition primary() Add a primary index
  * @method ColumnDefinition spatialIndex() Add a spatial index
  * @method ColumnDefinition storedAs(string $expression) Create a stored generated column (MySQL)
@@ -26,6 +29,10 @@ use Illuminate\Support\Fluent;
  * @method ColumnDefinition unsigned() Set the INTEGER column as UNSIGNED (MySQL)
  * @method ColumnDefinition useCurrent() Set the TIMESTAMP column to use CURRENT_TIMESTAMP as default value
  * @method ColumnDefinition virtualAs(string $expression) Create a virtual generated column (MySQL)
+<<<<<<< HEAD
+ * @method ColumnDefinition persisted() Mark the computed generated column as persistent (SQL Server)
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
  */
 class ColumnDefinition extends Fluent
 {

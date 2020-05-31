@@ -2,10 +2,14 @@
 
 namespace Illuminate\Support;
 
+<<<<<<< HEAD
+use Doctrine\Common\Inflector\Inflector;
+=======
 use Doctrine\Inflector\CachedWordInflector;
 use Doctrine\Inflector\Inflector;
 use Doctrine\Inflector\Rules\English;
 use Doctrine\Inflector\RulesetInflector;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
 class Pluralizer
 {
@@ -73,7 +77,11 @@ class Pluralizer
             return $value;
         }
 
+<<<<<<< HEAD
+        $plural = Inflector::pluralize($value);
+=======
         $plural = static::inflector()->pluralize($value);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
         return static::matchCase($plural, $value);
     }
@@ -86,7 +94,11 @@ class Pluralizer
      */
     public static function singular($value)
     {
+<<<<<<< HEAD
+        $singular = Inflector::singularize($value);
+=======
         $singular = static::inflector()->singularize($value);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
         return static::matchCase($singular, $value);
     }
@@ -121,6 +133,8 @@ class Pluralizer
 
         return $value;
     }
+<<<<<<< HEAD
+=======
 
     /**
      * Get the inflector instance.
@@ -144,4 +158,5 @@ class Pluralizer
 
         return $inflector;
     }
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 }

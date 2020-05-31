@@ -31,6 +31,124 @@
 	{
 		display: none;
 	}
+<<<<<<< HEAD
+	.loginbox{
+	width: 320px;
+	height: 350px;
+	border:1px;
+	background-color: #33FF33;
+	color: #fff;
+	padding: 70px 30px;
+	margin-left: 500px;
+	display: flex;
+	
+	
+
+}
+.re-home {
+	margin-top: 20px;
+	margin-left: 30px;
+	font-size: 30px;
+
+}
+.re-home a{
+	color: #666666;
+}
+h2{
+	margin-left: 500px;
+	margin-bottom: 20px;
+}
+p{
+	color:#444444;
+}
+
+.loginbox input{
+	width: 60px;
+	height: 30px;
+	margin-bottom: 20px;
+	
+}
+.loginbox input[type="password"]{
+	width: 100%;
+	height: 30px;
+	color: #333333;
+	font-size:  16px;
+}
+.loginbox input[type="text"]{
+	width: 95%;
+	height: 22px;
+	color: #333333;
+	font-size:  16px;
+}
+
+.dangki {
+    border: 1px;
+    height: 470px;
+    width: 292px;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    margin-left: 200px;
+    margin-bottom: 100px;
+    
+}
+
+}
+
+}
+ 
+label {
+    text-align: left;
+ 
+}
+input{
+    display: block;
+    border-bottom: 2px solid #00BCD4;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+input[type="text"] {
+    padding: 5px;
+    width: 70%;
+}
+ 
+input#submit {
+    padding: 7px;
+    width: 50%;
+    border: none;
+    position: absolute;
+    background-color: #66FFCC;
+    bottom: 10px;
+   
+    
+}
+input#summit::hover{
+	 background-color: #aaa;
+}
+.error{
+	height: 300px;
+	width: 400px;
+	text-align: center;
+	
+}
+.ct-title{
+	color: #FF0000;
+	font-size: 20px;
+	margin-right: -500px; 
+	text-align: center;
+}
+.ct-content{
+	color: black;
+	margin-left: 400px;
+	
+}
+}
+.product_pagination{
+	margin-left: 50%;
+	font-size: 20px;
+}
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 }
 
 /************
@@ -326,6 +444,81 @@
 	{
 		font-size: 24px;
 	}
+<<<<<<< HEAD
+	.loginbox{
+	width: 320px;
+	height: 420px;
+	background: #000;
+	color: #fff;
+	top: 50%
+	left: 50%;
+	padding: 70px 30px;
+	margin-left: 500px;
+	display: flex;
+	
+	
+
+}
+.loginbox input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.loginbox [type="text"], input[type="password"]{
+	border: none;
+	border-bottom: 1px solid;
+	height: 40px;
+	color: #fff;
+	font-size:  16px;
+}
+
+.sup_dangki{
+	 width: 500px;
+    height: 200px;
+    margin: 50px auto;
+    background-color: black;
+    display: flex;
+}
+.dangki {
+    border: 1px;
+    height: 470px;
+    width: 292px;
+    align-items: center;
+    position: relative;
+    background-color: red;
+    margin: auto;
+    
+}
+
+ 
+label {
+    text-align: left;
+ 
+}
+input{
+    display: block;
+    border-bottom: 2px solid #00BCD4;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+input[type="text"] {
+    padding: 5px;
+    width: 70%;
+}
+ 
+input#submit {
+    padding: 7px;
+    width: 50%;
+    border: none;
+    position: absolute;
+    bottom: 10px;
+   
+    
+}.error{
+	margin: auto;
+	float: right;
+}
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 }
 
 /************

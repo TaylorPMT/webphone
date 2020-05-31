@@ -11,11 +11,18 @@
 namespace Carbon\Traits;
 
 use Carbon\CarbonInterface;
+<<<<<<< HEAD
+=======
 use Carbon\Exceptions\InvalidTypeException;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 use Carbon\Exceptions\NotLocaleAwareException;
 use Carbon\Language;
 use Carbon\Translator;
 use Closure;
+<<<<<<< HEAD
+use InvalidArgumentException;
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 use Symfony\Component\Translation\TranslatorBagInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use Symfony\Contracts\Translation\LocaleAwareInterface;
@@ -185,9 +192,14 @@ trait Localization
     public static function getTranslationMessageWith($translator, string $key, string $locale = null, string $default = null)
     {
         if (!($translator instanceof TranslatorBagInterface && $translator instanceof TranslatorInterface)) {
+<<<<<<< HEAD
+            throw new InvalidArgumentException(
+                'Translator does not implement '.TranslatorInterface::class.' and '.TranslatorBagInterface::class.'.'
+=======
             throw new InvalidTypeException(
                 'Translator does not implement '.TranslatorInterface::class.' and '.TranslatorBagInterface::class.'. '.
                 (is_object($translator) ? get_class($translator) : gettype($translator)).' has been given.'
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             );
         }
 
@@ -382,10 +394,17 @@ trait Localization
             }
 
             $$translationKey = array_merge(
+<<<<<<< HEAD
+                $mode & CarbonInterface::TRANSLATE_MONTHS ? array_pad($months, 12, '>>DO NOT REPLACE<<') : [],
+                $mode & CarbonInterface::TRANSLATE_MONTHS ? array_pad($messages['months_short'], 12, '>>DO NOT REPLACE<<') : [],
+                $mode & CarbonInterface::TRANSLATE_DAYS ? array_pad($weekdays, 7, '>>DO NOT REPLACE<<') : [],
+                $mode & CarbonInterface::TRANSLATE_DAYS ? array_pad($messages['weekdays_short'], 7, '>>DO NOT REPLACE<<') : [],
+=======
                 $mode & CarbonInterface::TRANSLATE_MONTHS ? static::getTranslationArray($months, 12, $timeString) : [],
                 $mode & CarbonInterface::TRANSLATE_MONTHS ? static::getTranslationArray($messages['months_short'], 12, $timeString) : [],
                 $mode & CarbonInterface::TRANSLATE_DAYS ? static::getTranslationArray($weekdays, 7, $timeString) : [],
                 $mode & CarbonInterface::TRANSLATE_DAYS ? static::getTranslationArray($messages['weekdays_short'], 7, $timeString) : [],
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
                 $mode & CarbonInterface::TRANSLATE_UNITS ? array_map(function ($unit) use ($messages, $key, $cleanWord) {
                     $parts = explode('|', $messages[$unit]);
 
@@ -424,6 +443,8 @@ trait Localization
         }, " $timeString "), 1, -1);
     }
 
+<<<<<<< HEAD
+=======
     private static function getTranslationArray($translation, $length, $timeString)
     {
         $filler = '>>DO NOT REPLACE<<';
@@ -442,6 +463,7 @@ trait Localization
         return $list;
     }
 
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     /**
      * Translate a time string from the current locale (`$date->locale()`) to an other.
      *

@@ -87,11 +87,17 @@ class Collection extends BaseCollection implements QueueableCollection
         );
 
         $models->each(function ($model) use ($attributes) {
+<<<<<<< HEAD
+            $this->find($model->getKey())->forceFill(
+                Arr::only($model->getAttributes(), $attributes)
+            )->syncOriginalAttributes($attributes);
+=======
             $this->where($this->first()->getKeyName(), $model->getKey())
                 ->each
                 ->forceFill(Arr::only($model->getAttributes(), $attributes))
                 ->each
                 ->syncOriginalAttributes($attributes);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         });
 
         return $this;
@@ -192,6 +198,8 @@ class Collection extends BaseCollection implements QueueableCollection
     }
 
     /**
+<<<<<<< HEAD
+=======
      * Load a set of relationship counts onto the mixed relationship collection.
      *
      * @param  string  $relation
@@ -213,6 +221,7 @@ class Collection extends BaseCollection implements QueueableCollection
     }
 
     /**
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      * Determine if a key exists in the collection.
      *
      * @param  mixed  $key
@@ -600,7 +609,11 @@ class Collection extends BaseCollection implements QueueableCollection
         if (count($relations) === 0 || $relations === [[]]) {
             return [];
         } elseif (count($relations) === 1) {
+<<<<<<< HEAD
+            return $relations[0];
+=======
             return reset($relations);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         } else {
             return array_intersect(...$relations);
         }

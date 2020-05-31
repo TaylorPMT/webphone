@@ -13,7 +13,11 @@
         }
     ],
     "require": {
+<<<<<<< HEAD
+        "php": "^7.2",
+=======
         "php": ">=7.2",
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         "psr/log": "^1.0.1"
     },
     "require-dev": {
@@ -21,11 +25,19 @@
         "doctrine/couchdb": "~1.0@dev",
         "elasticsearch/elasticsearch": "^6.0",
         "graylog2/gelf-php": "^1.4.2",
+<<<<<<< HEAD
+        "jakub-onderka/php-parallel-lint": "^0.9",
+        "php-amqplib/php-amqplib": "~2.4",
+        "php-console/php-console": "^3.1.3",
+        "phpspec/prophecy": "^1.6.1",
+        "phpunit/phpunit": "^8.3",
+=======
         "php-amqplib/php-amqplib": "~2.4",
         "php-console/php-console": "^3.1.3",
         "php-parallel-lint/php-parallel-lint": "^1.0",
         "phpspec/prophecy": "^1.6.1",
         "phpunit/phpunit": "^8.5",
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         "predis/predis": "^1.1",
         "rollbar/rollbar": "^1.3",
         "ruflin/elastica": ">=0.90 <3.0",
@@ -60,16 +72,26 @@
         }
     },
     "scripts": {
+<<<<<<< HEAD
+        "test": [
+            "parallel-lint . --exclude vendor",
+=======
         "lint": [
             "parallel-lint . --exclude vendor"
         ],
         "test": [
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             "phpunit"
         ]
     },
     "config": {
+<<<<<<< HEAD
+        "sort-packages": true
+    }
+=======
         "sort-packages": true,
         "platform-check": false
     },
     "lock": false
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 }

@@ -14,6 +14,24 @@
  * - François B
  * - Serhan Apaydın
  * - JD Isaacks
+<<<<<<< HEAD
+ */
+return [
+    'year' => '{1}වසර|වසර :count',
+    'month' => '{1}මාසය|මාස :count',
+    'week' => '{1}සතියක්|සති :count',
+    'day' => '{1}දිනය|දින :count',
+    'hour' => '{1}පැය|පැය :count',
+    'minute' => '{1}මිනිත්තුව|මිනිත්තු :count',
+    'second' => '{1}තත්පර කිහිපය|තත්පර :count',
+    'ago' => ':timeකට පෙර',
+    'from_now' => function ($time) {
+        if (preg_match('/දින \d+/', $time)) {
+            return $time.'න්';
+        }
+
+        return $time.'කින්';
+=======
  * - Malinda Weerasinghe (MalindaWMD)
  */
 return [
@@ -46,6 +64,7 @@ return [
         }
 
         return $time.' කින්';
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     },
     'diff_now' => 'දැන්',
     'diff_yesterday' => 'ඊයේ',

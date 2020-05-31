@@ -63,8 +63,11 @@ final class WarningTestCase extends TestCase
 
     /**
      * @throws Exception
+<<<<<<< HEAD
+=======
      *
      * @psalm-return never-return
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
      */
     protected function runTest(): void
     {

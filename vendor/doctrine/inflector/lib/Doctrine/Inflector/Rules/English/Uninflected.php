@@ -40,7 +40,10 @@ final class Uninflected
         yield new Pattern('people');
         yield new Pattern('trivia');
         yield new Pattern('\w+ware$');
+<<<<<<< HEAD
+=======
         yield new Pattern('media');
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
     }
 
     /**
@@ -87,6 +90,10 @@ final class Uninflected
         yield new Pattern('emoji');
         yield new Pattern('equipment');
         yield new Pattern('evidence');
+<<<<<<< HEAD
+        yield new Pattern('experience');
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         yield new Pattern('faroese');
         yield new Pattern('feedback');
         yield new Pattern('fish');
@@ -188,6 +195,10 @@ final class Uninflected
         yield new Pattern('wildebeest');
         yield new Pattern('wood');
         yield new Pattern('wool');
+<<<<<<< HEAD
+        yield new Pattern('work');
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         yield new Pattern('yengeese');
     }
 }

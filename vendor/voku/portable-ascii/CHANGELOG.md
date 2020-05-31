@@ -1,5 +1,7 @@
 # Changelog
 
+<<<<<<< HEAD
+=======
 ### 1.5.1 (2020-05-26)
 
 - fix merge ASCII transliterations from "avian2/unidecode" (python)
@@ -15,6 +17,7 @@
 - "composer.json" -> remove "autoload-dev" stuff from "autoload"
 - "voku/php-readme-helper" -> auto-generate the API documentation in the README
 
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 ### 1.4.10 (2020-03-13)
 
 - ASCII::to_ascii() -> fix extra symbol handling in the regex

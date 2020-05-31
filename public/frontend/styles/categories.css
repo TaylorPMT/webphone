@@ -1322,4 +1322,84 @@ section
 .footer_social ul li a i:hover
 {
 	color: #FFFFFF;
+<<<<<<< HEAD
 }
+.loginbox{
+	width: 320px;
+	height: 420px;
+	background: #000;
+	color: #fff;
+	top: 50%
+	left: 50%;
+	padding: 70px 30px;
+	margin-left: 500px;
+	display: flex;
+	
+	
+
+}
+.loginbox input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+.loginbox [type="text"], input[type="password"]{
+	border: none;
+	border-bottom: 1px solid;
+	height: 40px;
+	color: #fff;
+	font-size:  16px;
+}
+
+.sup_dangki{
+	 width: 500px;
+    height: 200px;
+    margin: 50px auto;
+    background-color: black;
+    display: flex;
+}
+.dangki {
+    border: 1px;
+    height: 470px;
+    width: 292px;
+    align-items: center;
+    position: relative;
+    background-color: red;
+    margin: auto;
+    
+}
+
+}
+
+}
+ 
+label {
+    text-align: left;
+ 
+}
+input{
+    display: block;
+    border-bottom: 2px solid #00BCD4;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+input[type="text"] {
+    padding: 5px;
+    width: 70%;
+}
+ 
+input#submit {
+    padding: 7px;
+    width: 50%;
+    border: none;
+    position: absolute;
+    bottom: 10px;
+   
+    
+}.error{
+	margin: auto;
+	float: right;
+}
+
+=======
+}
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a

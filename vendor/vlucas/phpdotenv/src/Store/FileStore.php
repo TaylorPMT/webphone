@@ -50,7 +50,11 @@ class FileStore implements StoreInterface
 
         $contents = Reader::read($this->filePaths, $this->shortCircuit);
 
+<<<<<<< HEAD
+        if ($contents) {
+=======
         if (count($contents) > 0) {
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
             return implode("\n", $contents);
         }
 
