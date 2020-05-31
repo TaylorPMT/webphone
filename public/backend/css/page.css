@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* header page */
+
+.header__page {
+    height: 200px;
+    background-color: lawngreen;
+}
+
+footer {
+    position: static;
+    bottom: 0;
+    background-color: #343a40;
+    width: 100%;
+}
+
+
+/* end header */
+
+.box-footer {
+    position: static;
+    bottom: 0;
+}
+
+
+/* input search */
+
+.input_search[type=text] {
+    width: 130px;
+    height: 25px;
+    border-radius: 6px;
+}
+
+
+/* When the input field gets focus, change its width to 100% */
+
+.input_search[type=text]:focus {
+    width: 100%;
+}
+
+.form__search {
+    margin: 2px 8px;
+}
+
+.box__insert {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+    margin-right: 10px;
+}
+
+.btn-category {
+    border: 2px solid;
+}
