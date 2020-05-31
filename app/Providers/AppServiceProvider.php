@@ -25,6 +25,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        if(Session('cart')){
+            $oldCart=Session::get('cart');
+            $cart=new Cart($oldCart);
+        }
         JsonResource::withoutWrapping();
      
     }
