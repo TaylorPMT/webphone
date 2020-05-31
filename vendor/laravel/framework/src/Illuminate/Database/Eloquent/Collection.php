@@ -87,11 +87,23 @@ class Collection extends BaseCollection implements QueueableCollection
         );
 
         $models->each(function ($model) use ($attributes) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            $this->find($model->getKey())->forceFill(
+                Arr::only($model->getAttributes(), $attributes)
+            )->syncOriginalAttributes($attributes);
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             $this->where($this->first()->getKeyName(), $model->getKey())
                 ->each
                 ->forceFill(Arr::only($model->getAttributes(), $attributes))
                 ->each
                 ->syncOriginalAttributes($attributes);
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         });
 
         return $this;
@@ -192,6 +204,11 @@ class Collection extends BaseCollection implements QueueableCollection
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Load a set of relationship counts onto the mixed relationship collection.
      *
      * @param  string  $relation
@@ -213,6 +230,10 @@ class Collection extends BaseCollection implements QueueableCollection
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Determine if a key exists in the collection.
      *
      * @param  mixed  $key
@@ -600,7 +621,15 @@ class Collection extends BaseCollection implements QueueableCollection
         if (count($relations) === 0 || $relations === [[]]) {
             return [];
         } elseif (count($relations) === 1) {
+<<<<<<< HEAD
             return reset($relations);
+=======
+<<<<<<< HEAD
+            return $relations[0];
+=======
+            return reset($relations);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         } else {
             return array_intersect(...$relations);
         }

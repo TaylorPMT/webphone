@@ -195,6 +195,11 @@ class Stringable
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Split a string using a regular expression.
      *
      * @param  string  $pattern
@@ -210,6 +215,10 @@ class Stringable
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Cap a string with a single instance of a given value.
      *
      * @param  string  $cap

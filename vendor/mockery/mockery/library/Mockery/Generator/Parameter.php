@@ -59,6 +59,37 @@ class Parameter
             return 'array';
         }
 
+<<<<<<< HEAD
+        try {
+            if ($this->rfp->getClass()) {
+                return $this->rfp->getClass()->getName();
+=======
+<<<<<<< HEAD
+        /*
+         * PHP < 5.4.1 has some strange behaviour with a typehint of self and
+         * subclass signatures, so we risk the regexp instead
+         */
+        if ((version_compare(PHP_VERSION, '5.4.1') >= 0)) {
+            try {
+                if ($this->rfp->getClass()) {
+                    return $this->rfp->getClass()->getName();
+                }
+            } catch (\ReflectionException $re) {
+                // noop
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
+            }
+        } catch (\ReflectionException $re) {
+            // noop
+        }
+
+        if ($this->rfp->hasType()) {
+            return $this->rfp->getType()->getName();
+        }
+
+<<<<<<< HEAD
+        // can we even get here now?
+=======
+=======
         try {
             if ($this->rfp->getClass()) {
                 return $this->rfp->getClass()->getName();
@@ -72,6 +103,8 @@ class Parameter
         }
 
         // can we even get here now?
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         if (preg_match('/^Parameter #[0-9]+ \[ \<(required|optional)\> (?<typehint>\S+ )?.*\$' . $this->rfp->getName() . ' .*\]$/', $this->rfp->__toString(), $typehintMatch)) {
             if (!empty($typehintMatch['typehint'])) {
                 return $typehintMatch['typehint'];

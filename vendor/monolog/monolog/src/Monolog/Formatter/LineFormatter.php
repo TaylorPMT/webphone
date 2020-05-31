@@ -180,12 +180,23 @@ class LineFormatter extends NormalizerFormatter
                 $str .= ' faultactor: ' . $e->faultactor;
             }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            if (isset($e->detail) && (is_string($e->detail) || is_object($e->detail) || is_array($e->detail))) {
+                $str .= ' detail: ' . (is_string($e->detail) ? $e->detail : reset($e->detail));
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             if (isset($e->detail)) {
                 if (is_string($e->detail)) {
                     $str .= ' detail: ' . $e->detail;
                 } elseif (is_object($e->detail) || is_array($e->detail)) {
                     $str .= ' detail: ' . $this->toJson($e->detail, true);
                 }
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             }
         }
         $str .= '): ' . $e->getMessage() . ' at ' . $e->getFile() . ':' . $e->getLine() . ')';

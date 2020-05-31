@@ -115,8 +115,18 @@ abstract class ServiceProvider
     protected function loadViewComponentsAs($prefix, array $components)
     {
         $this->callAfterResolving(BladeCompiler::class, function ($blade) use ($prefix, $components) {
+<<<<<<< HEAD
             foreach ($components as $alias => $component) {
                 $blade->component($component, is_string($alias) ? $alias : null, $prefix);
+=======
+<<<<<<< HEAD
+            foreach ($components as $component) {
+                $blade->component($component, null, $prefix);
+=======
+            foreach ($components as $alias => $component) {
+                $blade->component($component, is_string($alias) ? $alias : null, $prefix);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             }
         });
     }

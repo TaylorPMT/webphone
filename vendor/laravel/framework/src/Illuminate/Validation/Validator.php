@@ -246,6 +246,11 @@ class Validator implements ValidatorContract
     protected $numericRules = ['Numeric', 'Integer'];
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * The current placeholder for dots in rule keys.
      *
      * @var string
@@ -253,6 +258,10 @@ class Validator implements ValidatorContract
     protected $dotPlaceholder;
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Create a new Validator instance.
      *
      * @param  \Illuminate\Contracts\Translation\Translator  $translator
@@ -265,8 +274,16 @@ class Validator implements ValidatorContract
     public function __construct(Translator $translator, array $data, array $rules,
                                 array $messages = [], array $customAttributes = [])
     {
+<<<<<<< HEAD
         $this->dotPlaceholder = Str::random();
 
+=======
+<<<<<<< HEAD
+=======
+        $this->dotPlaceholder = Str::random();
+
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         $this->initialRules = $rules;
         $this->translator = $translator;
         $this->customMessages = $messages;
@@ -291,11 +308,21 @@ class Validator implements ValidatorContract
                 $value = $this->parseData($value);
             }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            $key = str_replace(['.', '*'], ['->', '__asterisk__'], $key);
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             $key = str_replace(
                 ['.', '*'],
                 [$this->dotPlaceholder, '__asterisk__'],
                 $key
             );
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
             $newData[$key] = $value;
         }
@@ -333,6 +360,14 @@ class Validator implements ValidatorContract
         // rule. Any error messages will be added to the containers with each of
         // the other error messages, returning true if we don't have messages.
         foreach ($this->rules as $attribute => $rules) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            $attribute = str_replace('\.', '->', $attribute);
+
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             if ($this->shouldBeExcluded($attribute)) {
                 $this->removeAttribute($attribute);
 
@@ -564,7 +599,15 @@ class Validator implements ValidatorContract
     protected function getPrimaryAttribute($attribute)
     {
         foreach ($this->implicitAttributes as $unparsed => $parsed) {
+<<<<<<< HEAD
             if (in_array($attribute, $parsed, true)) {
+=======
+<<<<<<< HEAD
+            if (in_array($attribute, $parsed)) {
+=======
+            if (in_array($attribute, $parsed, true)) {
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
                 return $unparsed;
             }
         }
@@ -970,10 +1013,19 @@ class Validator implements ValidatorContract
      */
     public function setRules(array $rules)
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         $rules = collect($rules)->mapWithKeys(function ($value, $key) {
             return [str_replace('\.', $this->dotPlaceholder, $key) => $value];
         })->toArray();
 
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         $this->initialRules = $rules;
 
         $this->rules = [];

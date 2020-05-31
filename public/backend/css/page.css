@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,7 +14,7 @@
 }
 
 footer {
-    position: fixed;
+    position: static;
     bottom: 0;
     background-color: #343a40;
     width: 100%;
@@ -23,6 +24,117 @@ footer {
 /* end header */
 
 .box-footer {
-    position: fixed;
+    position: static;
     bottom: 0;
+}
+
+
+/* input search */
+
+.input_search[type=text] {
+    width: 130px;
+    height: 25px;
+    border-radius: 6px;
+}
+
+
+/* When the input field gets focus, change its width to 100% */
+
+.input_search[type=text]:focus {
+    width: 100%;
+}
+
+.form__search {
+    margin: 2px 8px;
+}
+
+.box__insert {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+    margin-right: 10px;
+}
+
+.btn-category {
+    border: 2px solid;
+=======
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box__app {
+    position: relative;
+}
+
+
+/* header page */
+
+.header__page {
+    height: 200px;
+    background-color: lawngreen;
+}
+
+.row-header__banner {
+    background-color: slategray;
+}
+
+main {
+    min-height: 80vh;
+}
+
+footer {
+    margin-top: 10px;
+    bottom: 0;
+    position: relative;
+    background-color: #343a40;
+}
+
+
+/* end header */
+
+#updateStatusCategory {
+    color: red;
+}
+
+
+/* input search */
+
+.input_search[type=text] {
+    width: 130px;
+    height: 25px;
+    border-radius: 6px;
+}
+
+
+/* When the input field gets focus, change its width to 100% */
+
+.input_search[type=text]:focus {
+    width: 100%;
+}
+
+.form__search {
+    margin: 2px 8px;
+}
+
+.box__insert {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+    margin-right: 10px;
+}
+
+.btn-category {
+    border: 2px solid;
+}
+
+#radioBtn .notActive {
+    color: #3276b1;
+    background-color: #fff;
+}
+
+.btn-category-color {
+    margin: 0 5px;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 }

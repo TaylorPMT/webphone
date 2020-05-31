@@ -34,7 +34,15 @@ interface LegacyMockInterface
     /**
      * Set expected method calls
      *
+<<<<<<< HEAD
      * @param string|array ...$methodNames one or many methods that are expected to be called in this mock
+=======
+<<<<<<< HEAD
+     * @param array ...$methodNames one or many methods that are expected to be called in this mock
+=======
+     * @param string|array ...$methodNames one or many methods that are expected to be called in this mock
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      *
      * @return \Mockery\ExpectationInterface|\Mockery\Expectation|\Mockery\HigherOrderMessage
      */
@@ -43,7 +51,15 @@ interface LegacyMockInterface
     /**
      * Shortcut method for setting an expectation that a method should not be called.
      *
+<<<<<<< HEAD
      * @param string|array ...$methodNames one or many methods that are expected not to be called in this mock
+=======
+<<<<<<< HEAD
+     * @param array ...$methodNames one or many methods that are expected not to be called in this mock
+=======
+     * @param string|array ...$methodNames one or many methods that are expected not to be called in this mock
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @return \Mockery\ExpectationInterface|\Mockery\Expectation|\Mockery\HigherOrderMessage
      */
     public function shouldNotReceive(...$methodNames);

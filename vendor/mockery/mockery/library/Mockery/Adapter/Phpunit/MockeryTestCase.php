@@ -20,10 +20,28 @@
 
 namespace Mockery\Adapter\Phpunit;
 
+<<<<<<< HEAD
 abstract class MockeryTestCase extends \PHPUnit\Framework\TestCase
 {
     use MockeryPHPUnitIntegration;
     use MockeryTestCaseSetUp;
+=======
+<<<<<<< HEAD
+if (class_exists('PHPUnit_Framework_TestCase') || version_compare(\PHPUnit\Runner\Version::id(), '8.0.0', '<')) {
+    class_alias(MockeryTestCaseSetUpForV7AndPrevious::class, MockeryTestCaseSetUp::class);
+} else {
+    class_alias(MockeryTestCaseSetUpForV8::class, MockeryTestCaseSetUp::class);
+}
+abstract class MockeryTestCase extends \PHPUnit\Framework\TestCase
+{
+    use MockeryPHPUnitIntegration, MockeryTestCaseSetUp;
+=======
+abstract class MockeryTestCase extends \PHPUnit\Framework\TestCase
+{
+    use MockeryPHPUnitIntegration;
+    use MockeryTestCaseSetUp;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
     protected function mockeryTestSetUp()
     {

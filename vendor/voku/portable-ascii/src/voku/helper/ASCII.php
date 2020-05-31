@@ -193,9 +193,19 @@ final class ASCII
     /**
      * Get all languages from the constants "ASCII::.*LANGUAGE_CODE".
      *
+<<<<<<< HEAD
      * @return string[]
      *
      * @psalm-return array<string, string>
+=======
+<<<<<<< HEAD
+     * @return array<string,string>
+=======
+     * @return string[]
+     *
+     * @psalm-return array<string, string>
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      *
      * @noinspection PhpDocMissingThrowsInspection
      */
@@ -222,20 +232,39 @@ final class ASCII
     /**
      * Returns an replacement array for ASCII methods.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * EXAMPLE: <code>
      * $array = ASCII::charsArray();
      * var_dump($array['ru']['б']); // 'b'
      * </code>
      *
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @psalm-suppress InvalidNullableReturnType - we use the prepare* methods here, so we don't get NULL here
      *
      * @param bool $replace_extra_symbols [optional] <p>Add some more replacements e.g. "£" with " pound ".</p>
      *
      * @psalm-pure
      *
+<<<<<<< HEAD
      * @return array
      *
      * @psalm-return array<string, array<string , string>>
+=======
+<<<<<<< HEAD
+     * @return array<string, array<string , string>>
+=======
+     * @return array
+     *
+     * @psalm-return array<string, array<string , string>>
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      */
     public static function charsArray(bool $replace_extra_symbols = false): array
     {
@@ -253,24 +282,51 @@ final class ASCII
     /**
      * Returns an replacement array for ASCII methods with a mix of multiple languages.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * EXAMPLE: <code>
      * $array = ASCII::charsArrayWithMultiLanguageValues();
      * var_dump($array['b']); // ['β', 'б', 'ဗ', 'ბ', 'ب']
      * </code>
      *
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @param bool $replace_extra_symbols [optional] <p>Add some more replacements e.g. "£" with " pound ".</p>
      *
      * @psalm-pure
      *
+<<<<<<< HEAD
      * @return array         <p>An array of replacements.</p>
      * @return array<string, array<int, string>>
+=======
+<<<<<<< HEAD
+     * @return array<string, array<int, string>>
+     *                       <p>An array of replacements.</p>
+=======
+     * @return array         <p>An array of replacements.</p>
+     * @return array<string, array<int, string>>
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      */
     public static function charsArrayWithMultiLanguageValues(bool $replace_extra_symbols = false): array
     {
         /**
          * @psalm-suppress ImpureStaticVariable
          *
+<<<<<<< HEAD
          * @var array<string, array>
+=======
+<<<<<<< HEAD
+         * @var array<string,array>
+=======
+         * @var array<string, array>
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
          */
         static $CHARS_ARRAY = [];
         $cacheKey = '' . $replace_extra_symbols;
@@ -310,12 +366,21 @@ final class ASCII
      * For example, German will map 'ä' to 'ae', while other languages
      * will simply return e.g. 'a'.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * EXAMPLE: <code>
      * $array = ASCII::charsArrayWithOneLanguage('ru');
      * $tmpKey = \array_search('yo', $array['replace']);
      * echo $array['orig'][$tmpKey]; // 'ё'
      * </code>
      *
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @psalm-suppress InvalidNullableReturnType - we use the prepare* methods here, so we don't get NULL here
      *
      * @param string $language              [optional] <p>Language of the source string e.g.: en, de_at, or de-ch.
@@ -325,9 +390,20 @@ final class ASCII
      *                                      array</p>
      * @psalm-pure
      *
+<<<<<<< HEAD
      * @return array <p>An array of replacements.</p>
      *
      * @psalm-return array{orig: string[], replace: string[]}|array<string, string>
+=======
+<<<<<<< HEAD
+     * @return array{orig: string[], replace: string[]}|array<string, string>
+     *                     <p>An array of replacements.</p>
+=======
+     * @return array <p>An array of replacements.</p>
+     *
+     * @psalm-return array{orig: string[], replace: string[]}|array<string, string>
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      */
     public static function charsArrayWithOneLanguage(
         string $language = self::ENGLISH_LANGUAGE_CODE,
@@ -340,7 +416,15 @@ final class ASCII
         /**
          * @psalm-suppress ImpureStaticVariable
          *
+<<<<<<< HEAD
          * @var array<string, array>
+=======
+<<<<<<< HEAD
+         * @var array<string,array>
+=======
+         * @var array<string, array>
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
          */
         static $CHARS_ARRAY = [];
         $cacheKey = '' . $replace_extra_symbols . '-' . $asOrigReplaceArray;
@@ -410,20 +494,40 @@ final class ASCII
     /**
      * Returns an replacement array for ASCII methods with multiple languages.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * EXAMPLE: <code>
      * $array = ASCII::charsArrayWithSingleLanguageValues();
      * $tmpKey = \array_search('hnaik', $array['replace']);
      * echo $array['orig'][$tmpKey]; // '၌'
      * </code>
      *
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @param bool $replace_extra_symbols [optional] <p>Add some more replacements e.g. "£" with " pound ".</p>
      * @param bool $asOrigReplaceArray    [optional] <p>TRUE === return thr {orig: string[], replace: string[]}
      *                                    array</p>
      * @psalm-pure
      *
+<<<<<<< HEAD
      * @return array <p>An array of replacements.</p>
      *
      * @psalm-return array{orig: string[], replace: string[]}|array<string, string>
+=======
+<<<<<<< HEAD
+     * @return array{orig: string[], replace: string[]}|array<string, string>
+     *                     <p>An array of replacements.</p>
+=======
+     * @return array <p>An array of replacements.</p>
+     *
+     * @psalm-return array{orig: string[], replace: string[]}|array<string, string>
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      */
     public static function charsArrayWithSingleLanguageValues(
         bool $replace_extra_symbols = false,
@@ -533,10 +637,19 @@ final class ASCII
     /**
      * Checks if a string is 7 bit ASCII.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * EXAMPLE: <code>
      * ASCII::is_ascii('白'); // false
      * </code>
      *
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @param string $str <p>The string to check.</p>
      *
      * @psalm-pure
@@ -561,10 +674,19 @@ final class ASCII
      * Windows-1252 (commonly used in Word documents) replaced by their ASCII
      * equivalents.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * EXAMPLE: <code>
      * ASCII::normalize_msword('„Abcdef…”'); // '"Abcdef..."'
      * </code>
      *
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @param string $str <p>The string to be normalized.</p>
      *
      * @psalm-pure
@@ -578,6 +700,13 @@ final class ASCII
             return '';
         }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        // init
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         /**
          * @psalm-suppress ImpureStaticVariable
          *
@@ -607,10 +736,19 @@ final class ASCII
     /**
      * Normalize the whitespace.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * EXAMPLE: <code>
      * ASCII::normalize_whitespace("abc-\xc2\xa0-öäü-\xe2\x80\xaf-\xE2\x80\xAC", true); // "abc-\xc2\xa0-öäü- -"
      * </code>
      *
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @param string $str                     <p>The string to be normalized.</p>
      * @param bool   $keepNonBreakingSpace    [optional] <p>Set to true, to keep non-breaking-spaces.</p>
      * @param bool   $keepBidiUnicodeControls [optional] <p>Set to true, to keep non-printable (for the web)
@@ -659,7 +797,14 @@ final class ASCII
             static $BIDI_UNICODE_CONTROLS_CACHE = null;
 
             if ($BIDI_UNICODE_CONTROLS_CACHE === null) {
+<<<<<<< HEAD
                 /** @noinspection PsalmLocalImmutableInspection */
+=======
+<<<<<<< HEAD
+=======
+                /** @noinspection PsalmLocalImmutableInspection */
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
                 $BIDI_UNICODE_CONTROLS_CACHE = self::$BIDI_UNI_CODE_CONTROLS_TABLE;
             }
 
@@ -718,10 +863,19 @@ final class ASCII
      * en, en_GB, or en-GB. For example, passing "de" results in "äöü" mapping
      * to "aeoeue" rather than "aou" as in other languages.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * EXAMPLE: <code>
      * ASCII::to_ascii('�Düsseldorf�', 'en'); // Dusseldorf
      * </code>
      *
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @param string    $str                       <p>The input string.</p>
      * @param string    $language                  [optional] <p>Language of the source string.
      *                                             (default is 'en') | ASCII::*_LANGUAGE_CODE</p>
@@ -783,11 +937,26 @@ final class ASCII
                     $EXTRA_SYMBOLS_CACHE[$extrasDataKeyTmp] = $extrasDataKeyTmp;
                 }
             }
+<<<<<<< HEAD
             $EXTRA_SYMBOLS_CACHE = \implode('', $EXTRA_SYMBOLS_CACHE);
+=======
+<<<<<<< HEAD
+            $EXTRA_SYMBOLS_CACHE = \implode('',$EXTRA_SYMBOLS_CACHE);
+=======
+            $EXTRA_SYMBOLS_CACHE = \implode('', $EXTRA_SYMBOLS_CACHE);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         }
 
         $charDone = [];
         if (\preg_match_all('/' . self::$REGEX_ASCII . ($replace_extra_symbols ? '|[' . $EXTRA_SYMBOLS_CACHE . ']' : '') . '/u', $str, $matches)) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             if (!$replace_single_chars_only) {
                 foreach ($matches[0] as $keyTmp => $char) {
                     if (isset($matches[0][$keyTmp + 2])) {
@@ -802,7 +971,15 @@ final class ASCII
                         &&
                         isset($REPLACE_HELPER_CACHE[$cacheKey][$threeChars])
                         &&
+<<<<<<< HEAD
                         \strpos($str, $threeChars) !== false
+=======
+<<<<<<< HEAD
+                        strpos($str, $threeChars) !== false
+=======
+                        \strpos($str, $threeChars) !== false
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
                     ) {
                         // DEBUG
                         //\var_dump($str, $threeChars, $REPLACE_HELPER_CACHE[$cacheKey][$threeChars]);
@@ -828,7 +1005,15 @@ final class ASCII
                         &&
                         isset($REPLACE_HELPER_CACHE[$cacheKey][$twoChars])
                         &&
+<<<<<<< HEAD
                         \strpos($str, $twoChars) !== false
+=======
+<<<<<<< HEAD
+                        strpos($str, $twoChars) !== false
+=======
+                        \strpos($str, $twoChars) !== false
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
                     ) {
                         // DEBUG
                         //\var_dump($str, $twoChars, $REPLACE_HELPER_CACHE[$cacheKey][$twoChars]);
@@ -848,7 +1033,15 @@ final class ASCII
                     &&
                     isset($REPLACE_HELPER_CACHE[$cacheKey][$char])
                     &&
+<<<<<<< HEAD
                     \strpos($str, $char) !== false
+=======
+<<<<<<< HEAD
+                    strpos($str, $char) !== false
+=======
+                    \strpos($str, $char) !== false
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
                 ) {
                     // DEBUG
                     //\var_dump($str, $char, $REPLACE_HELPER_CACHE[$cacheKey][$char]);
@@ -860,6 +1053,13 @@ final class ASCII
                     //\var_dump($str, "\n");
                 }
             }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         }
 
         /** @psalm-suppress PossiblyNullOperand - we use the prepare* methods here, so we don't get NULL here */
@@ -883,10 +1083,19 @@ final class ASCII
     /**
      * Convert given string to safe filename (and keep string case).
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * EXAMPLE: <code>
      * ASCII::to_filename('שדגשדג.png', true)); // 'shdgshdg.png'
      * </code>
      *
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @param string $str
      * @param bool   $use_transliterate <p>ASCII::to_transliterate() is used by default - unsafe characters are
      *                                  simply replaced with hyphen otherwise.</p>
@@ -1006,10 +1215,19 @@ final class ASCII
      * replaced with their closest ASCII counterparts, and the rest are removed
      * unless instructed otherwise.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * EXAMPLE: <code>
      * ASCII::to_transliterate('déjà σσς iıii'); // 'deja sss iiii'
      * </code>
      *
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @param string      $str     <p>The input string.</p>
      * @param string|null $unknown [optional] <p>Character use if character unknown. (default is '?')
      *                             But you can also use NULL to keep the unknown chars.</p>
@@ -1109,7 +1327,14 @@ final class ASCII
         }
 
         if (self::$ORD === null) {
+<<<<<<< HEAD
             /** @noinspection PsalmLocalImmutableInspection */
+=======
+<<<<<<< HEAD
+=======
+            /** @noinspection PsalmLocalImmutableInspection */
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             self::$ORD = self::getData('ascii_ord');
         }
 
@@ -1182,7 +1407,15 @@ final class ASCII
 
             $bank = $ord >> 8;
             if (!isset($UTF8_TO_TRANSLIT[$bank])) {
+<<<<<<< HEAD
                 $UTF8_TO_TRANSLIT[$bank] = self::getDataIfExists(\sprintf('x%03x', $bank));
+=======
+<<<<<<< HEAD
+                $UTF8_TO_TRANSLIT[$bank] = self::getDataIfExists(\sprintf('x%02x', $bank));
+=======
+                $UTF8_TO_TRANSLIT[$bank] = self::getDataIfExists(\sprintf('x%03x', $bank));
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             }
 
             $new_char = $ord & 255;
@@ -1327,7 +1560,14 @@ final class ASCII
             self::prepareAsciiExtras();
 
             /** @psalm-suppress PossiblyNullArgument - we use the prepare* methods here, so we don't get NULL here */
+<<<<<<< HEAD
             /** @noinspection PsalmLocalImmutableInspection */
+=======
+<<<<<<< HEAD
+=======
+            /** @noinspection PsalmLocalImmutableInspection */
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             self::$ASCII_MAPS_AND_EXTRAS = \array_merge_recursive(
                 self::$ASCII_MAPS ?? [],
                 self::$ASCII_EXTRAS ?? []
@@ -1343,7 +1583,14 @@ final class ASCII
     private static function prepareAsciiMaps()
     {
         if (self::$ASCII_MAPS === null) {
+<<<<<<< HEAD
             /** @noinspection PsalmLocalImmutableInspection */
+=======
+<<<<<<< HEAD
+=======
+            /** @noinspection PsalmLocalImmutableInspection */
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             self::$ASCII_MAPS = self::getData('ascii_by_languages');
         }
     }
@@ -1356,7 +1603,14 @@ final class ASCII
     private static function prepareAsciiExtras()
     {
         if (self::$ASCII_EXTRAS === null) {
+<<<<<<< HEAD
             /** @noinspection PsalmLocalImmutableInspection */
+=======
+<<<<<<< HEAD
+=======
+            /** @noinspection PsalmLocalImmutableInspection */
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             self::$ASCII_EXTRAS = self::getData('ascii_extras_by_languages');
         }
     }

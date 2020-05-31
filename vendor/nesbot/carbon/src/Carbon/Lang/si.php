@@ -14,6 +14,37 @@
  * - François B
  * - Serhan Apaydın
  * - JD Isaacks
+<<<<<<< HEAD
+ * - Malinda Weerasinghe (MalindaWMD)
+=======
+<<<<<<< HEAD
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
+ */
+return [
+    'year' => '{1}වසර 1|වසර :count',
+    'a_year' => '{1}වසරක්|වසර :count',
+    'month' => '{1}මාස 1|මාස :count',
+    'a_month' => '{1}මාසය|මාස :count',
+    'week' => '{1}සති 1|සති :count',
+    'a_week' => '{1}සතියක්|සති :count',
+    'day' => '{1}දින 1|දින :count',
+    'a_day' => '{1}දිනක්|දින :count',
+    'hour' => '{1}පැය 1|පැය :count',
+    'a_hour' => '{1}පැයක්|පැය :count',
+    'minute' => '{1}මිනිත්තු 1|මිනිත්තු :count',
+    'a_minute' => '{1}මිනිත්තුවක්|මිනිත්තු :count',
+    'second' => '{1}තත්පර 1|තත්පර :count',
+    'a_second' => '{1}තත්පර කිහිපයකට|තත්පර :count',
+    'ago' => ':time කට පෙර',
+    'from_now' => function ($time) {
+        if (preg_match('/දින \d+/', $time)) {
+            return $time.' න්';
+        }
+
+<<<<<<< HEAD
+=======
+        return $time.'කින්';
+=======
  * - Malinda Weerasinghe (MalindaWMD)
  */
 return [
@@ -37,6 +68,7 @@ return [
             return $time.' න්';
         }
 
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         return $time.' කින්';
     },
     'before' => ':time කට පෙර',
@@ -46,6 +78,10 @@ return [
         }
 
         return $time.' කින්';
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
     },
     'diff_now' => 'දැන්',
     'diff_today' => 'අද',

@@ -78,6 +78,11 @@ class BelongsToMany extends Relation
     protected $pivotWhereIns = [];
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Any pivot table restrictions for whereNull clauses.
      *
      * @var array
@@ -85,6 +90,10 @@ class BelongsToMany extends Relation
     protected $pivotWhereNulls = [];
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * The default values for the pivot columns.
      *
      * @var array
@@ -512,6 +521,11 @@ class BelongsToMany extends Relation
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Set a "where null" clause for a pivot table column.
      *
      * @param  string  $column
@@ -563,6 +577,10 @@ class BelongsToMany extends Relation
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Find a related model by its primary key or return new instance of the related model.
      *
      * @param  mixed  $id
@@ -641,7 +659,15 @@ class BelongsToMany extends Relation
      */
     public function find($id, $columns = ['*'])
     {
+<<<<<<< HEAD
         if (! $id instanceof Model && (is_array($id) || $id instanceof Arrayable)) {
+=======
+<<<<<<< HEAD
+        if (is_array($id) || $id instanceof Arrayable) {
+=======
+        if (! $id instanceof Model && (is_array($id) || $id instanceof Arrayable)) {
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             return $this->findMany($id, $columns);
         }
 

@@ -1,5 +1,10 @@
 CHANGELOG
 ---------
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 ### v3.5.3, 2020.05.25
 
 - Improved parser
@@ -9,6 +14,10 @@ If the class scope was `null`, then the optimisation didn't work as expected and
 ### v3.5.2, 2020.05.21
 
 - Removed extra semicolon in short closures, since is not part of the closure's body.
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
 ### v3.5.1, 2019.11.30
 

@@ -17,8 +17,16 @@ class Inflectible
     public static function getSingular() : iterable
     {
         yield new Transformation(new Pattern('(s)tatuses$'), '\1\2tatus');
+<<<<<<< HEAD
         yield new Transformation(new Pattern('(s)tatus$'), '\1\2tatus');
         yield new Transformation(new Pattern('(c)ampus$'), '\1\2ampus');
+=======
+<<<<<<< HEAD
+=======
+        yield new Transformation(new Pattern('(s)tatus$'), '\1\2tatus');
+        yield new Transformation(new Pattern('(c)ampus$'), '\1\2ampus');
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         yield new Transformation(new Pattern('^(.*)(menu)s$'), '\1\2');
         yield new Transformation(new Pattern('(quiz)zes$'), '\\1');
         yield new Transformation(new Pattern('(matr)ices$'), '\1ix');

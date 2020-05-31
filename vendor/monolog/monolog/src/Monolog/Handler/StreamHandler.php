@@ -12,7 +12,14 @@
 namespace Monolog\Handler;
 
 use Monolog\Logger;
+<<<<<<< HEAD
 use Monolog\Utils;
+=======
+<<<<<<< HEAD
+=======
+use Monolog\Utils;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
 /**
  * Stores to any stream resource
@@ -47,7 +54,15 @@ class StreamHandler extends AbstractProcessingHandler
         if (is_resource($stream)) {
             $this->stream = $stream;
         } elseif (is_string($stream)) {
+<<<<<<< HEAD
             $this->url = Utils::canonicalizePath($stream);
+=======
+<<<<<<< HEAD
+            $this->url = $stream;
+=======
+            $this->url = Utils::canonicalizePath($stream);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         } else {
             throw new \InvalidArgumentException('A stream must either be a resource or a string.');
         }

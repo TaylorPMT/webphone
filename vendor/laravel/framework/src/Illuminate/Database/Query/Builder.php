@@ -984,6 +984,11 @@ class Builder
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Add an "or where in raw" clause for integer values to the query.
      *
      * @param  string  $column
@@ -996,6 +1001,10 @@ class Builder
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Add a "where not in raw" clause for integer values to the query.
      *
      * @param  string  $column
@@ -1009,6 +1018,11 @@ class Builder
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Add an "or where not in raw" clause for integer values to the query.
      *
      * @param  string  $column
@@ -1021,6 +1035,10 @@ class Builder
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Add a "where null" clause to the query.
      *
      * @param  string|array  $columns

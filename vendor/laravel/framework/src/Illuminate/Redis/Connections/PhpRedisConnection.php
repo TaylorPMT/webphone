@@ -4,7 +4,14 @@ namespace Illuminate\Redis\Connections;
 
 use Closure;
 use Illuminate\Contracts\Redis\Connection as ConnectionContract;
+<<<<<<< HEAD
 use Illuminate\Support\Arr;
+=======
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Arr;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 use Illuminate\Support\Str;
 use Redis;
 use RedisCluster;
@@ -241,7 +248,15 @@ class PhpRedisConnection extends Connection implements ConnectionContract
      */
     public function zrangebyscore($key, $min, $max, $options = [])
     {
+<<<<<<< HEAD
         if (isset($options['limit']) && Arr::isAssoc($options['limit'])) {
+=======
+<<<<<<< HEAD
+        if (isset($options['limit'])) {
+=======
+        if (isset($options['limit']) && Arr::isAssoc($options['limit'])) {
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             $options['limit'] = [
                 $options['limit']['offset'],
                 $options['limit']['count'],
@@ -262,7 +277,15 @@ class PhpRedisConnection extends Connection implements ConnectionContract
      */
     public function zrevrangebyscore($key, $min, $max, $options = [])
     {
+<<<<<<< HEAD
         if (isset($options['limit']) && Arr::isAssoc($options['limit'])) {
+=======
+<<<<<<< HEAD
+        if (isset($options['limit'])) {
+=======
+        if (isset($options['limit']) && Arr::isAssoc($options['limit'])) {
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             $options['limit'] = [
                 $options['limit']['offset'],
                 $options['limit']['count'],

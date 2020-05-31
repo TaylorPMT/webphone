@@ -73,6 +73,12 @@ final class Filter
 
         $file              = $frame['file'];
         $fileIsNotPrefixed = $prefix === false || \strpos($file, $prefix) !== 0;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        $script            = \realpath($GLOBALS['_SERVER']['SCRIPT_NAME']);
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
         // @see https://github.com/sebastianbergmann/phpunit/issues/4033
         if (isset($GLOBALS['_SERVER']['SCRIPT_NAME'])) {
@@ -80,6 +86,10 @@ final class Filter
         } else {
             $script = '';
         }
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
         return \is_file($file) &&
                self::fileIsBlacklisted($file, $blacklist) &&

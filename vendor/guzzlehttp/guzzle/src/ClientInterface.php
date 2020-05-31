@@ -15,7 +15,15 @@ interface ClientInterface
     /**
      * @deprecated Will be removed in Guzzle 7.0.0
      */
+<<<<<<< HEAD
     const VERSION = '6.5.4';
+=======
+<<<<<<< HEAD
+    const VERSION = '6.5.3';
+=======
+    const VERSION = '6.5.4';
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
     /**
      * Send an HTTP request.

@@ -52,10 +52,17 @@ class Handler extends ExceptionHandler
     {
         if($this->isHttpException($exception))
         {
+<<<<<<< HEAD
                 if($exception->getStatusCode()==404)
                 {
                     return redirect()->route('error');
                 }
+=======
+            if($exception->getStatusCode()==404)
+            {
+                return redirect()->route('error');
+            }
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
         }
         return parent::render($request, $exception);
     }

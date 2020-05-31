@@ -15,10 +15,24 @@ use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Carbon\CarbonInterval;
 use Carbon\CarbonPeriod;
+<<<<<<< HEAD
 use Carbon\Exceptions\UnitException;
 use Closure;
 use DateTime;
 use DateTimeImmutable;
+=======
+<<<<<<< HEAD
+use Closure;
+use DateTime;
+use DateTimeImmutable;
+use InvalidArgumentException;
+=======
+use Carbon\Exceptions\UnitException;
+use Closure;
+use DateTime;
+use DateTimeImmutable;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
 /**
  * Trait Converter.
@@ -211,7 +225,15 @@ trait Converter
                 return 'H:i:s.u';
         }
 
+<<<<<<< HEAD
         throw new UnitException('Precision unit expected among: minute, second, millisecond and microsecond.');
+=======
+<<<<<<< HEAD
+        throw new InvalidArgumentException('Precision unit expected among: minute, second, millisecond and microsecond.');
+=======
+        throw new UnitException('Precision unit expected among: minute, second, millisecond and microsecond.');
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
     }
 
     /**

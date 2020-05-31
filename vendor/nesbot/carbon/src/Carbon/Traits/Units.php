@@ -12,8 +12,18 @@ namespace Carbon\Traits;
 
 use Carbon\CarbonInterface;
 use Carbon\CarbonInterval;
+<<<<<<< HEAD
 use Carbon\Exceptions\UnitException;
 use DateInterval;
+=======
+<<<<<<< HEAD
+use DateInterval;
+use InvalidArgumentException;
+=======
+use Carbon\Exceptions\UnitException;
+use DateInterval;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
 /**
  * Trait Units.
@@ -124,7 +134,15 @@ trait Units
 
             default:
                 if ($this->localStrictModeEnabled ?? static::isStrictModeEnabled()) {
+<<<<<<< HEAD
                     throw new UnitException("Invalid unit for real timestamp add/sub: '$unit'");
+=======
+<<<<<<< HEAD
+                    throw new InvalidArgumentException("Invalid unit for real timestamp add/sub: '$unit'");
+=======
+                    throw new UnitException("Invalid unit for real timestamp add/sub: '$unit'");
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
                 }
 
                 return $this;

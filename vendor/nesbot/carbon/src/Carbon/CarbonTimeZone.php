@@ -10,10 +10,23 @@
  */
 namespace Carbon;
 
+<<<<<<< HEAD
 use Carbon\Exceptions\InvalidCastException;
 use Carbon\Exceptions\InvalidTimeZoneException;
 use DateTimeInterface;
 use DateTimeZone;
+=======
+<<<<<<< HEAD
+use DateTimeInterface;
+use DateTimeZone;
+use InvalidArgumentException;
+=======
+use Carbon\Exceptions\InvalidCastException;
+use Carbon\Exceptions\InvalidTimeZoneException;
+use DateTimeInterface;
+use DateTimeZone;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
 class CarbonTimeZone extends DateTimeZone
 {
@@ -25,7 +38,15 @@ class CarbonTimeZone extends DateTimeZone
     protected static function parseNumericTimezone($timezone)
     {
         if ($timezone <= -100 || $timezone >= 100) {
+<<<<<<< HEAD
             throw new InvalidTimeZoneException('Absolute timezone offset cannot be greater than 100.');
+=======
+<<<<<<< HEAD
+            throw new InvalidArgumentException('Absolute timezone offset cannot be greater than 100.');
+=======
+            throw new InvalidTimeZoneException('Absolute timezone offset cannot be greater than 100.');
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         }
 
         return ($timezone >= 0 ? '+' : '').$timezone.':00';
@@ -67,7 +88,15 @@ class CarbonTimeZone extends DateTimeZone
                 return new $className($this->getName());
             }
 
+<<<<<<< HEAD
             throw new InvalidCastException("$className has not the instance() method needed to cast the date.");
+=======
+<<<<<<< HEAD
+            throw new InvalidArgumentException("$className has not the instance() method needed to cast the date.");
+=======
+            throw new InvalidCastException("$className has not the instance() method needed to cast the date.");
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         }
 
         return $className::instance($this);
@@ -79,8 +108,16 @@ class CarbonTimeZone extends DateTimeZone
      * @param DateTimeZone|string|int|null $object     original value to get CarbonTimeZone from it.
      * @param DateTimeZone|string|int|null $objectDump dump of the object for error messages.
      *
+<<<<<<< HEAD
      * @throws InvalidTimeZoneException
      *
+=======
+<<<<<<< HEAD
+=======
+     * @throws InvalidTimeZoneException
+     *
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @return false|static
      */
     public static function instance($object = null, $objectDump = null)
@@ -101,7 +138,15 @@ class CarbonTimeZone extends DateTimeZone
 
         if ($tz === false) {
             if (Carbon::isStrictModeEnabled()) {
+<<<<<<< HEAD
                 throw new InvalidTimeZoneException('Unknown or bad timezone ('.($objectDump ?: $object).')');
+=======
+<<<<<<< HEAD
+                throw new InvalidArgumentException('Unknown or bad timezone ('.($objectDump ?: $object).')');
+=======
+                throw new InvalidTimeZoneException('Unknown or bad timezone ('.($objectDump ?: $object).')');
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             }
 
             return false;
@@ -216,7 +261,15 @@ class CarbonTimeZone extends DateTimeZone
 
         if ($tz === false) {
             if (Carbon::isStrictModeEnabled()) {
+<<<<<<< HEAD
                 throw new InvalidTimeZoneException('Unknown timezone for offset '.$this->getOffset($date ?: Carbon::now($this)).' seconds.');
+=======
+<<<<<<< HEAD
+                throw new InvalidArgumentException('Unknown timezone for offset '.$this->getOffset($date ?: Carbon::now($this)).' seconds.');
+=======
+                throw new InvalidTimeZoneException('Unknown timezone for offset '.$this->getOffset($date ?: Carbon::now($this)).' seconds.');
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             }
 
             return false;

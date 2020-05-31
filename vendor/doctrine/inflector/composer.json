@@ -13,7 +13,15 @@
         {"name": "Johannes Schmitt", "email": "schmittjoh@gmail.com"}
     ],
     "require": {
+<<<<<<< HEAD
         "php": "^7.2 || ^8.0"
+=======
+<<<<<<< HEAD
+        "php": "^7.2"
+=======
+        "php": "^7.2 || ^8.0"
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
     },
     "require-dev": {
         "doctrine/coding-standard": "^7.0",
@@ -24,11 +32,25 @@
     },
     "autoload": {
         "psr-4": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector",
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
         }
     },
     "autoload-dev": {
         "psr-4": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            "Doctrine\\Tests\\Common\\Inflector\\": "tests/Doctrine/Tests/Common/Inflector",
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             "Doctrine\\Tests\\Inflector\\": "tests/Doctrine/Tests/Inflector"
         }
     },

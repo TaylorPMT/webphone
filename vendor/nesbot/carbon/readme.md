@@ -11,8 +11,16 @@
 An international PHP extension for DateTime. [http://carbon.nesbot.com](http://carbon.nesbot.com)
 
 ```php
+<<<<<<< HEAD
 <?php
 
+=======
+<<<<<<< HEAD
+=======
+<?php
+
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 use Carbon\Carbon;
 
 printf("Right now is %s", Carbon::now()->toDateTimeString());

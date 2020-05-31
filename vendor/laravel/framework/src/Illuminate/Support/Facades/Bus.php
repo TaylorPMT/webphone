@@ -7,12 +7,30 @@ use Illuminate\Foundation\Bus\PendingChain;
 use Illuminate\Support\Testing\Fakes\BusFake;
 
 /**
+<<<<<<< HEAD
  * @method static \Illuminate\Contracts\Bus\Dispatcher map(array $map)
  * @method static \Illuminate\Contracts\Bus\Dispatcher pipeThrough(array $pipes)
  * @method static bool hasCommandHandler($command)
  * @method static bool|mixed getCommandHandler($command)
  * @method static mixed dispatch($command)
  * @method static mixed dispatchNow($command, $handler = null)
+=======
+<<<<<<< HEAD
+ * @method static mixed dispatch($command)
+ * @method static mixed dispatchNow($command, $handler = null)
+ * @method static bool hasCommandHandler($command)
+ * @method static bool|mixed getCommandHandler($command)
+ * @method static \Illuminate\Contracts\Bus\Dispatcher pipeThrough(array $pipes)
+ * @method static \Illuminate\Contracts\Bus\Dispatcher map(array $map)
+=======
+ * @method static \Illuminate\Contracts\Bus\Dispatcher map(array $map)
+ * @method static \Illuminate\Contracts\Bus\Dispatcher pipeThrough(array $pipes)
+ * @method static bool hasCommandHandler($command)
+ * @method static bool|mixed getCommandHandler($command)
+ * @method static mixed dispatch($command)
+ * @method static mixed dispatchNow($command, $handler = null)
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
  * @method static void assertDispatched(string $command, callable|int $callback = null)
  * @method static void assertDispatchedTimes(string $command, int $times = 1)
  * @method static void assertNotDispatched(string $command, callable|int $callback = null)

@@ -292,6 +292,11 @@ abstract class AbstractPaginator implements Htmlable
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Load a set of relationship counts onto the mixed relationship collection.
      *
      * @param  string  $relation
@@ -306,6 +311,10 @@ abstract class AbstractPaginator implements Htmlable
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Get the slice of items being paginated.
      *
      * @return array
@@ -553,6 +562,11 @@ abstract class AbstractPaginator implements Htmlable
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Indicate that Tailwind styling should be used for generated links.
      *
      * @return void
@@ -564,6 +578,10 @@ abstract class AbstractPaginator implements Htmlable
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Indicate that Bootstrap 3 styling should be used for generated links.
      *
      * @return void

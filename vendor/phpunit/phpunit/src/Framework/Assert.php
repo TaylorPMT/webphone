@@ -3460,8 +3460,16 @@ abstract class Assert
      * Mark the test as incomplete.
      *
      * @throws IncompleteTestError
+<<<<<<< HEAD
      *
      * @psalm-return never-return
+=======
+<<<<<<< HEAD
+=======
+     *
+     * @psalm-return never-return
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      */
     public static function markTestIncomplete(string $message = ''): void
     {
@@ -3473,8 +3481,16 @@ abstract class Assert
      *
      * @throws SkippedTestError
      * @throws SyntheticSkippedError
+<<<<<<< HEAD
      *
      * @psalm-return never-return
+=======
+<<<<<<< HEAD
+=======
+     *
+     * @psalm-return never-return
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      */
     public static function markTestSkipped(string $message = ''): void
     {

@@ -71,10 +71,23 @@ class ZendMonitorHandler extends AbstractProcessingHandler
 
     /**
      * Write to Zend Monitor Events
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param string $type Text displayed in "Class Name (custom)" field
+     * @param string $message Text displayed in "Error String"
+     * @param mixed $formatted Displayed in Custom Variables tab
+     * @param int $severity Set the event severity level (-1,0,1)
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @param string $type      Text displayed in "Class Name (custom)" field
      * @param string $message   Text displayed in "Error String"
      * @param mixed  $formatted Displayed in Custom Variables tab
      * @param int    $severity  Set the event severity level (-1,0,1)
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      */
     protected function writeZendMonitorCustomEvent(string $type, string $message, array $formatted, int $severity): void
     {

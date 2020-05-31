@@ -190,6 +190,7 @@ class NotificationSender
                     $notification->locale = $this->locale;
                 }
 
+<<<<<<< HEAD
                 $queue = $notification->queue;
 
                 if (method_exists($notification, 'viaQueues')) {
@@ -200,6 +201,25 @@ class NotificationSender
                     (new SendQueuedNotifications($notifiable, $notification, [$channel]))
                             ->onConnection($notification->connection)
                             ->onQueue($queue)
+=======
+<<<<<<< HEAD
+                $this->bus->dispatch(
+                    (new SendQueuedNotifications($notifiable, $notification, [$channel]))
+                            ->onConnection($notification->connection)
+                            ->onQueue($notification->queue)
+=======
+                $queue = $notification->queue;
+
+                if (method_exists($notification, 'viaQueues')) {
+                    $queue = $notification->viaQueues()[$channel] ?? null;
+                }
+
+                $this->bus->dispatch(
+                    (new SendQueuedNotifications($notifiable, $notification, [$channel]))
+                            ->onConnection($notification->connection)
+                            ->onQueue($queue)
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
                             ->delay($notification->delay)
                             ->through(
                                 array_merge(

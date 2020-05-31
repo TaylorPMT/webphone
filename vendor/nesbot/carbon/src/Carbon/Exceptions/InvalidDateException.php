@@ -11,9 +11,21 @@
 namespace Carbon\Exceptions;
 
 use Exception;
+<<<<<<< HEAD
 use InvalidArgumentException as BaseInvalidArgumentException;
 
 class InvalidDateException extends BaseInvalidArgumentException implements InvalidArgumentException
+=======
+<<<<<<< HEAD
+use InvalidArgumentException;
+
+class InvalidDateException extends InvalidArgumentException
+=======
+use InvalidArgumentException as BaseInvalidArgumentException;
+
+class InvalidDateException extends BaseInvalidArgumentException implements InvalidArgumentException
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 {
     /**
      * The invalid field.
@@ -32,10 +44,23 @@ class InvalidDateException extends BaseInvalidArgumentException implements Inval
     /**
      * Constructor.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @param string          $field
+     * @param mixed           $value
+     * @param int             $code
+     * @param \Exception|null $previous
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @param string         $field
      * @param mixed          $value
      * @param int            $code
      * @param Exception|null $previous
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      */
     public function __construct($field, $value, $code = 0, Exception $previous = null)
     {

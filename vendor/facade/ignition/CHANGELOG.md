@@ -2,10 +2,16 @@
 
 All notable changes to `ignition` will be documented in this file
 
+<<<<<<< HEAD
 ## 2.0.5 - 2020-05-29
 
 - blacklist certain variable names when fixing variable names
 
+=======
+<<<<<<< HEAD
+## 2.0.1 - 2020-03-18
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 ## 2.0.4 - 2020-05-18
 
 - handle exceptions in case the request doesn't have a user (#274)
@@ -15,6 +21,10 @@ All notable changes to `ignition` will be documented in this file
 - support Laravel 8
 
 ## 2.0.2 - 2020-03-18
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
 - fix execute solution route not defined (#265)
 

@@ -131,7 +131,15 @@ class ValidationRuleParser
         foreach ($data as $key => $value) {
             if (Str::startsWith($key, $attribute) || (bool) preg_match('/^'.$pattern.'\z/', $key)) {
                 foreach ((array) $rules as $rule) {
+<<<<<<< HEAD
                     $this->implicitAttributes[$attribute][] = $key;
+=======
+<<<<<<< HEAD
+                    $this->implicitAttributes[$attribute][] = strval($key);
+=======
+                    $this->implicitAttributes[$attribute][] = $key;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
                     $results = $this->mergeRules($results, $key, $rule);
                 }

@@ -23,6 +23,25 @@ namespace Mockery\Generator;
 class DefinedTargetClass implements TargetClassInterface
 {
     private $rfc;
+<<<<<<< HEAD
+    private $name;
+=======
+<<<<<<< HEAD
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
+
+    public function __construct(\ReflectionClass $rfc, $alias = null)
+    {
+        $this->rfc = $rfc;
+        $this->name = $alias === null ? $rfc->getName() : $alias;
+    }
+
+    public static function factory($name, $alias = null)
+    {
+<<<<<<< HEAD
+        return new self(new \ReflectionClass($name), $alias);
+=======
+        return new self(new \ReflectionClass($name));
+=======
     private $name;
 
     public function __construct(\ReflectionClass $rfc, $alias = null)
@@ -34,11 +53,21 @@ class DefinedTargetClass implements TargetClassInterface
     public static function factory($name, $alias = null)
     {
         return new self(new \ReflectionClass($name), $alias);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
     }
 
     public function getName()
     {
+<<<<<<< HEAD
         return $this->name;
+=======
+<<<<<<< HEAD
+        return $this->rfc->getName();
+=======
+        return $this->name;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
     }
 
     public function isAbstract()

@@ -33,6 +33,11 @@ class TelegramBotHandler extends AbstractProcessingHandler
     private const BOT_API = 'https://api.telegram.org/bot';
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @var array AVAILABLE_PARSE_MODES The available values of parseMode according to the Telegram api documentation
      */
     private const AVAILABLE_PARSE_MODES = [
@@ -42,6 +47,10 @@ class TelegramBotHandler extends AbstractProcessingHandler
     ];
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Telegram bot access token provided by BotFather.
      * Create telegram bot with https://telegram.me/BotFather and use access token from it.
      * @var string
@@ -56,6 +65,11 @@ class TelegramBotHandler extends AbstractProcessingHandler
     private $channel;
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * The kind of formatting that is used for the message.
      * See available options at https://core.telegram.org/bots/api#formatting-options
      * or in AVAILABLE_PARSE_MODES
@@ -76,6 +90,10 @@ class TelegramBotHandler extends AbstractProcessingHandler
     private $disableNotification;
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @param string $apiKey  Telegram bot access token provided by BotFather
      * @param string $channel Telegram channel name
      * @inheritDoc
@@ -84,10 +102,20 @@ class TelegramBotHandler extends AbstractProcessingHandler
         string $apiKey,
         string $channel,
         $level = Logger::DEBUG,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        bool $bubble = true
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         bool $bubble = true,
         string $parseMode = null,
         bool $disableWebPagePreview = null,
         bool $disableNotification = null
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
     ) {
         parent::__construct($level, $bubble);
 
@@ -95,6 +123,11 @@ class TelegramBotHandler extends AbstractProcessingHandler
         $this->channel = $channel;
         $this->level = $level;
         $this->bubble = $bubble;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         $this->setParseMode($parseMode);
         $this->disableWebPagePreview($disableWebPagePreview);
         $this->disableNotification($disableNotification);
@@ -120,6 +153,10 @@ class TelegramBotHandler extends AbstractProcessingHandler
     {
         $this->disableNotification = $disableNotification;
         return $this;
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
     }
 
     /**
@@ -144,9 +181,18 @@ class TelegramBotHandler extends AbstractProcessingHandler
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query([
             'text' => $message,
             'chat_id' => $this->channel,
+<<<<<<< HEAD
             'parse_mode' => $this->parseMode,
             'disable_web_page_preview' => $this->disableWebPagePreview,
             'disable_notification' => $this->disableNotification,
+=======
+<<<<<<< HEAD
+=======
+            'parse_mode' => $this->parseMode,
+            'disable_web_page_preview' => $this->disableWebPagePreview,
+            'disable_notification' => $this->disableNotification,
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         ]));
 
         $result = Curl\Util::execute($ch);

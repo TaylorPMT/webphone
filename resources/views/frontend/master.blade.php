@@ -7,6 +7,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Sublime project">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="frontend/styles/bootstrap4/bootstrap.min.css">
 <link href="frontend/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -39,6 +44,7 @@
 							<nav class="main_nav">
 								<ul>
 									@foreach($menu as $me)
+<<<<<<< HEAD
 										@if($me->id == 13)
 											<li class="hassubs">
 												<a href="#">{{$me->name}}</a>
@@ -52,7 +58,12 @@
 										
 										@else
 						<li class="page_menu_item menu_mm"><a href="#">{{$me->name}}<i class="fa fa-angle-down"></i></a></li>@endif
+=======
+						<li class="page_menu_item menu_mm"><a href="#">{{$me->name}}<i class="fa fa-angle-down"></i></a></li>
+						
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 					@endforeach
+					<li class="page_menu_item menu_mm"><a href="{{ Route('getloginAdmin') }}">Đăng Nhập Admin<i class="fa fa-angle-down"></i></a></li>
 								</ul>
 							</nav>
 							<div class="header_extra ml-auto">
@@ -153,7 +164,12 @@
 										@else
 						<li class="page_menu_item menu_mm"><a href="#">{{$me->name}}<i class="fa fa-angle-down"></i></a></li>@endif
 					@endforeach
+<<<<<<< HEAD
 								</ul>
+=======
+				
+				</ul>
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 			</div>
 		</div>
 

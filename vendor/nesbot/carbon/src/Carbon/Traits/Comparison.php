@@ -10,9 +10,20 @@
  */
 namespace Carbon\Traits;
 
+<<<<<<< HEAD
 use BadMethodCallException;
 use Carbon\CarbonInterface;
 use Carbon\Exceptions\BadComparisonUnitException;
+=======
+<<<<<<< HEAD
+use Carbon\CarbonInterface;
+use Carbon\Exceptions\BadUnitException;
+=======
+use BadMethodCallException;
+use Carbon\CarbonInterface;
+use Carbon\Exceptions\BadComparisonUnitException;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 use InvalidArgumentException;
 
 /**
@@ -570,6 +581,14 @@ trait Comparison
      * @param string                                        $format date formats to compare.
      * @param \Carbon\Carbon|\DateTimeInterface|string|null $date   instance to compare with or null to use current day.
      *
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+     * @throws \InvalidArgumentException
+     *
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * @return bool
      */
     public function isSameAs($format, $date = null)
@@ -589,7 +608,15 @@ trait Comparison
      * @param string                                 $unit singular unit string
      * @param \Carbon\Carbon|\DateTimeInterface|null $date instance to compare with or null to use current day.
      *
+<<<<<<< HEAD
      * @throws BadComparisonUnitException
+=======
+<<<<<<< HEAD
+     * @throws \InvalidArgumentException
+=======
+     * @throws BadComparisonUnitException
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      *
      * @return bool
      */
@@ -620,7 +647,15 @@ trait Comparison
             }
 
             if ($this->localStrictModeEnabled ?? static::isStrictModeEnabled()) {
+<<<<<<< HEAD
                 throw new BadComparisonUnitException($unit);
+=======
+<<<<<<< HEAD
+                throw new BadUnitException($unit);
+=======
+                throw new BadComparisonUnitException($unit);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
             }
 
             return false;
@@ -640,7 +675,15 @@ trait Comparison
      *
      * @param string $unit The unit to test.
      *
+<<<<<<< HEAD
      * @throws BadMethodCallException
+=======
+<<<<<<< HEAD
+     * @throws \BadMethodCallException
+=======
+     * @throws BadMethodCallException
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      *
      * @return bool
      */

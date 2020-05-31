@@ -1,9 +1,18 @@
 # Change Log
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 ## 6.5.4 - 2020-05-25
 
 * Fix various intl icu issues [#2626](https://github.com/guzzle/guzzle/pull/2626)
 
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 ## 6.5.3 - 2020-04-18
 
 * Use Symfony intl-idn polyfill [#2550](https://github.com/guzzle/guzzle/pull/2550)
@@ -23,10 +32,20 @@
 * Improvement: Added support for reset internal queue in MockHandler. [#2143](https://github.com/guzzle/guzzle/pull/2143)
 * Improvement: Added support to pass arbitrary options to `curl_multi_init`. [#2287](https://github.com/guzzle/guzzle/pull/2287)
 * Fix: Gracefully handle passing `null` to the `header` option. [#2132](https://github.com/guzzle/guzzle/pull/2132)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+* Fix: `RetryMiddleware` did not do exponential delay between retires due unit mismatch. [#2132](https://github.com/guzzle/guzzle/pull/2132)
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 * Fix: `RetryMiddleware` did not do exponential delay between retries due unit mismatch. [#2132](https://github.com/guzzle/guzzle/pull/2132)
   Previously, `RetryMiddleware` would sleep for 1 millisecond, then 2 milliseconds, then 4 milliseconds.
   **After this change, `RetryMiddleware` will sleep for 1 second, then 2 seconds, then 4 seconds.**
   `Middleware::retry()` accepts a second callback parameter to override the default timeouts if needed.
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 * Fix: Prevent undefined offset when using array for ssl_key options. [#2348](https://github.com/guzzle/guzzle/pull/2348)
 * Deprecated `ClientInterface::VERSION`
 

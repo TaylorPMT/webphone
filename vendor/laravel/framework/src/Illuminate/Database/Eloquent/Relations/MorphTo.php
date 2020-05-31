@@ -45,6 +45,11 @@ class MorphTo extends BelongsTo
     protected $morphableEagerLoads = [];
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * A map of relationship counts to load for each individual morph type.
      *
      * @var array
@@ -52,6 +57,10 @@ class MorphTo extends BelongsTo
     protected $morphableEagerLoadCounts = [];
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Create a new morph to relationship instance.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query
@@ -128,10 +137,20 @@ class MorphTo extends BelongsTo
                             ->with(array_merge(
                                 $this->getQuery()->getEagerLoads(),
                                 (array) ($this->morphableEagerLoads[get_class($instance)] ?? [])
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                            ));
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
                             ))
                             ->withCount(
                                 (array) ($this->morphableEagerLoadCounts[get_class($instance)] ?? [])
                             );
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
         $whereIn = $this->whereInMethod($instance, $ownerKey);
 
@@ -293,6 +312,11 @@ class MorphTo extends BelongsTo
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Specify which relationship counts to load for a given morph type.
      *
      * @param  array  $withCount
@@ -308,6 +332,10 @@ class MorphTo extends BelongsTo
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Replay stored macro calls on the actual related instance.
      *
      * @param  \Illuminate\Database\Eloquent\Builder  $query

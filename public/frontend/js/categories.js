@@ -230,5 +230,17 @@ $(document).ready(function()
 	        });
 		}
 	}
+<<<<<<< HEAD
+	function validateForm(){
+		var name = .loginbox [type="text"].length;
+		var pass = .loginbox [type="password"].length;
+		if(name<1)
+			alert('Tên đăng nhập rỗng');
+		if (pass<1)
+			alert('mật khẩu rỗng');
+		return true;
+	}
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
 
 });

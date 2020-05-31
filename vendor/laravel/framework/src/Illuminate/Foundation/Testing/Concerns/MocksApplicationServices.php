@@ -5,7 +5,14 @@ namespace Illuminate\Foundation\Testing\Concerns;
 use Illuminate\Contracts\Bus\Dispatcher as BusDispatcherContract;
 use Illuminate\Contracts\Events\Dispatcher as EventsDispatcherContract;
 use Illuminate\Contracts\Notifications\Dispatcher as NotificationDispatcher;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Event;
+=======
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Event;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 use Mockery;
 
 trait MocksApplicationServices
@@ -103,8 +110,16 @@ trait MocksApplicationServices
             $this->firedEvents[] = $called;
         });
 
+<<<<<<< HEAD
         Event::clearResolvedInstances();
 
+=======
+<<<<<<< HEAD
+=======
+        Event::clearResolvedInstances();
+
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         $this->app->instance('events', $mock);
 
         return $this;

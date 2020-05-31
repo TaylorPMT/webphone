@@ -11,8 +11,18 @@ class DummyClass extends Exception
      *
      * @return void
      */
+<<<<<<< HEAD
     public function report()
     {
+=======
+<<<<<<< HEAD
+     public function report()
+     {
+=======
+    public function report()
+    {
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         //
     }
 

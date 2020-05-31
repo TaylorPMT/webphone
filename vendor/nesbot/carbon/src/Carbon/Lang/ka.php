@@ -22,7 +22,14 @@
  * - JD Isaacks
  * - LONGMAN
  * - Avtandil Kikabidze (akalongman)
+<<<<<<< HEAD
  * - Levan Velijanashvili (Stichoza)
+=======
+<<<<<<< HEAD
+=======
+ * - Levan Velijanashvili (Stichoza)
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
  */
 return [
     'year' => ':count წელი',
@@ -115,6 +122,28 @@ return [
     'before' => function ($time) {
         $replacements = [
             // year
+<<<<<<< HEAD
+            'წელი' => 'წლით',
+=======
+<<<<<<< HEAD
+            'წელი' => 'წლის',
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
+            // month
+            'თვე' => 'თვით',
+            // week
+            'კვირა' => 'კვირით',
+            // day
+            'დღე' => 'დღით',
+            // hour
+            'საათი' => 'საათით',
+            // minute
+            'წუთი' => 'წუთით',
+            // second
+<<<<<<< HEAD
+            'წამი' => 'წამით',
+=======
+            'წამი' => 'წამის',
+=======
             'წელი' => 'წლით',
             // month
             'თვე' => 'თვით',
@@ -128,11 +157,21 @@ return [
             'წუთი' => 'წუთით',
             // second
             'წამი' => 'წამით',
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         ];
         $time = strtr($time, array_flip($replacements));
         $time = strtr($time, $replacements);
 
+<<<<<<< HEAD
         return "$time ადრე";
+=======
+<<<<<<< HEAD
+        return "$time უკან";
+=======
+        return "$time ადრე";
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
     },
     'diff_now' => 'ახლა',
     'diff_today' => 'დღეს',

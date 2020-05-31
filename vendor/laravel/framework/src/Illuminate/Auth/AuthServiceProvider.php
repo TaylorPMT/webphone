@@ -3,11 +3,24 @@
 namespace Illuminate\Auth;
 
 use Illuminate\Auth\Access\Gate;
+<<<<<<< HEAD
 use Illuminate\Auth\Middleware\RequirePassword;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Contracts\Routing\UrlGenerator;
+=======
+<<<<<<< HEAD
+use Illuminate\Contracts\Auth\Access\Gate as GateContract;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+=======
+use Illuminate\Auth\Middleware\RequirePassword;
+use Illuminate\Contracts\Auth\Access\Gate as GateContract;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Contracts\Routing\UrlGenerator;
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 use Illuminate\Support\ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -22,7 +35,14 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerAuthenticator();
         $this->registerUserResolver();
         $this->registerAccessGate();
+<<<<<<< HEAD
         $this->registerRequirePassword();
+=======
+<<<<<<< HEAD
+=======
+        $this->registerRequirePassword();
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
         $this->registerRequestRebindHandler();
         $this->registerEventRebindHandler();
     }
@@ -77,6 +97,11 @@ class AuthServiceProvider extends ServiceProvider
     }
 
     /**
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Register a resolver for the authenticated user.
      *
      * @return void
@@ -95,6 +120,10 @@ class AuthServiceProvider extends ServiceProvider
     }
 
     /**
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
      * Handle the re-binding of the request binding.
      *
      * @return void

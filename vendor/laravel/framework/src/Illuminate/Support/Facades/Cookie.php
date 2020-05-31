@@ -3,9 +3,21 @@
 namespace Illuminate\Support\Facades;
 
 /**
+<<<<<<< HEAD
  * @method static array getQueuedCookies()
  * @method static unqueue($name)
  * @method static void queue(...$parameters)
+=======
+<<<<<<< HEAD
+ * @method static void queue(...$parameters)
+ * @method static unqueue($name)
+ * @method static array getQueuedCookies()
+=======
+ * @method static array getQueuedCookies()
+ * @method static unqueue($name)
+ * @method static void queue(...$parameters)
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
  *
  * @see \Illuminate\Cookie\CookieJar
  */

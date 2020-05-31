@@ -2,10 +2,20 @@
 
 namespace Illuminate\Support;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+use Doctrine\Common\Inflector\Inflector;
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 use Doctrine\Inflector\CachedWordInflector;
 use Doctrine\Inflector\Inflector;
 use Doctrine\Inflector\Rules\English;
 use Doctrine\Inflector\RulesetInflector;
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
 class Pluralizer
 {
@@ -73,7 +83,15 @@ class Pluralizer
             return $value;
         }
 
+<<<<<<< HEAD
         $plural = static::inflector()->pluralize($value);
+=======
+<<<<<<< HEAD
+        $plural = Inflector::pluralize($value);
+=======
+        $plural = static::inflector()->pluralize($value);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
         return static::matchCase($plural, $value);
     }
@@ -86,7 +104,15 @@ class Pluralizer
      */
     public static function singular($value)
     {
+<<<<<<< HEAD
         $singular = static::inflector()->singularize($value);
+=======
+<<<<<<< HEAD
+        $singular = Inflector::singularize($value);
+=======
+        $singular = static::inflector()->singularize($value);
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
         return static::matchCase($singular, $value);
     }
@@ -121,6 +147,11 @@ class Pluralizer
 
         return $value;
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 
     /**
      * Get the inflector instance.
@@ -144,4 +175,8 @@ class Pluralizer
 
         return $inflector;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> a374cc3b592256c10dd67c86b205180b6a28a17a
+>>>>>>> 9699cae06a00ea46819366b49ff86b34206b891d
 }
